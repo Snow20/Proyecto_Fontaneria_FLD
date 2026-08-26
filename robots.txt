@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: /examen-m3/exercicio-2/sitemap.xml
