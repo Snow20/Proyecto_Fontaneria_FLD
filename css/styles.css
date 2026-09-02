@@ -1,21 +1,13 @@
 :root {
     /* Color Palette */
     --color-navy: #0A2540;
-    /* Marca, títulos, header, fondos oscuros */
     --color-blue-primary: #0077FF;
-    /* CTAs, Ligazons, filtros activos */
     --color-blue-focus: #80BFFF;
-    /* Focus accesible */
     --color-red-emergency: #D9381E;
-    /* Botóns de emerxencia, erros, avisos */
     --color-bg-light: #F4F6F8;
-    /* Fondos secundarios */
     --color-white: #FFFFFF;
-    /* Fondo principal */
     --color-text-main: #333333;
-    /* Textos, iconas */
     --color-text-sub: #6B7280;
-    /* Información auxiliar */
     --color-border: #E0E0E0;
 
     /* Typography */
@@ -45,7 +37,6 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    /* Texto campo: 16px / 400 / 160% */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -59,7 +50,6 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
-    /* 120% */
     color: var(--color-navy);
 }
 
@@ -67,7 +57,6 @@ h2 {
     font-size: 32px;
     font-weight: 700;
     line-height: 1.2;
-    /* 120% */
     color: var(--color-navy);
 }
 
@@ -75,7 +64,6 @@ h3 {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
-    /* 130% */
     color: var(--color-navy);
 }
 
@@ -84,7 +72,6 @@ h3 {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
-    /* Subtítulo: 20px / 500 / 140% */
     color: var(--color-text-main);
 }
 
@@ -96,9 +83,7 @@ h3 {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
-    /* Texto Auxiliar: 14px / 400 / 160% */
 }
-
 
 header {
     background-color: var(--color-white);
@@ -112,7 +97,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--space-4) var(--space-8);
-    /* Header Padding Spec Desktop: 16px / 32px */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,6 +107,7 @@ header {
     align-items: center;
     gap: var(--space-2);
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logoImg {
@@ -138,10 +123,24 @@ header {
     color: #7B8A99;
 }
 
+.headerNavGroup {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
 .nav ul {
     display: flex;
     list-style: none;
     gap: var(--space-6);
+    align-items: center;
 }
 
 .nav a {
@@ -149,6 +148,7 @@ header {
     color: var(--color-text-main);
     font-weight: 500;
     font-size: 16px;
+    transition: color 0.2s ease;
 }
 
 .nav a:hover {
@@ -212,12 +212,11 @@ header {
     color: var(--color-blue-primary);
 }
 
-/* IDIOMA SWITCHER */
+/* Idioma switcher */
 .headerIdiomas {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
+    display: contents;
 }
+
 
 .lang-switch-pill {
     background-color: var(--color-navy);
@@ -226,6 +225,8 @@ header {
     display: flex;
     align-items: center;
     gap: var(--space-1);
+    flex-shrink: 0;
+    margin-left: var(--space-6);
 }
 
 .btnIdioma {
@@ -246,20 +247,31 @@ header {
     font-size: 14px;
 }
 
-/*BUTTONS (Text Spec: 16px / Weight: 600 / Line-height: 100% / Padding Desktop: 12px 20px)*/
+.headerIdiomas .btn-emergency {
+    margin-left: auto;
+}
+
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-navy);
+    cursor: pointer;
+    padding: var(--space-2);
+}
+
+/* Buttons */
 .btn {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
     line-height: 1;
-    /* 100% */
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
-    /* Padding Desktop spec: 12px V / 20px H */
     cursor: pointer;
     border: none;
     transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -319,10 +331,9 @@ header {
     background-color: rgba(217, 56, 30, 0.08);
 }
 
-/* HERO SECTION*/
+/* herosection */
 .heroSection {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.82),
-            rgba(255, 255, 255, 0.82)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
         url('../assets/images/fontaneria.jpg');
     background-size: cover;
     background-position: center;
@@ -384,6 +395,7 @@ header {
     margin-top: auto;
 }
 
+/*Coverage Section */
 .coverage-section {
     max-width: 1200px;
     margin: 0 auto var(--space-12) auto;
@@ -394,7 +406,6 @@ header {
     background-color: var(--color-bg-light);
     border-radius: 16px;
     padding: var(--space-8);
-    /* 32px Padding */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-8);
@@ -408,12 +419,11 @@ header {
     overflow: hidden;
 }
 
-.coverage-map img {
+.coverage-map iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border: 0;
 }
-
 
 .coverage-info {
     display: flex;
@@ -455,14 +465,16 @@ header {
     margin-top: var(--space-1);
 }
 
-/*main*/
+/* Cards & Grids */
 .card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
+    width: 100%;
+    background-color: var(--color-navy);
+    border-radius: 16px;
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-img {
@@ -485,7 +497,6 @@ header {
     border-radius: 4px;
 }
 
-/* banner cta*/
 .cta {
     max-width: 1200px;
     margin: 0 auto var(--space-12) auto;
@@ -494,25 +505,20 @@ header {
 
 .ctaContent {
     background-color: var(--color-bg-light);
-    /* #F4F6F8 */
-    border-radius: 16px;
+    border-radius: 20px;
     padding: var(--space-12) var(--space-6);
-    /* 48px vertical / 24px horizontal */
     text-align: center;
 }
 
 .ctaContent h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.2;
     color: var(--color-navy);
-    /* #0A2540 */
     margin-bottom: var(--space-2);
 }
 
 .ctaContent p {
     font-size: 16px;
-    font-weight: 400;
     color: var(--color-navy);
     margin-bottom: var(--space-6);
 }
@@ -527,43 +533,51 @@ header {
 .heroContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
-    /* 48px Gap entre columnas */
+    gap: var(--space-8);
+    align-items: center;
+}
+
+.heroText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .heroText h1 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.25;
     color: var(--color-navy);
-    margin-bottom: var(--space-4);
-    text-align: center;
+    margin-bottom: var(--space-3);
 }
 
 .heroText .subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--color-text-main);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-sub);
     margin-bottom: var(--space-6);
-    text-align: center;
 }
 
 .heroText p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
+    font-size: 15px;
     color: var(--color-text-main);
-    margin-bottom: var(--space-4);
+    line-height: 1.6;
+    margin-bottom: var(--space-3);
+    max-width: 480px;
+}
+
+.heroImages {
+    width: 100%;
+    height: 340px;
+    border-radius: 24px;
+    overflow: hidden;
 }
 
 .heroImages img {
     width: 100%;
     height: 100%;
-    max-height: 400px;
     object-fit: cover;
-    border-radius: 20px;
     display: block;
 }
 
@@ -612,17 +626,6 @@ header {
     gap: var(--space-8);
 }
 
-
-.card {
-    background-color: var(--color-navy);
-    border-radius: 16px;
-    padding: var(--space-4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
 .cardImage-wrapper {
     width: 100%;
     height: 200px;
@@ -661,30 +664,27 @@ header {
 
 .cardGarantia {
     background-color: var(--color-navy);
-    border-radius: 16px;
-    padding: var(--space-6) var(--space-4);
+    border-radius: 20px;
+    padding: var(--space-8) var(--space-6);
     text-align: center;
     color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 220px;
 }
 
 .cardGarantia h3 {
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.3;
     color: var(--color-white);
     margin-bottom: var(--space-2);
 }
 
 .cardGarantia p {
     font-size: 14px;
-    font-weight: 400;
+    color: #D1D5DB;
     line-height: 1.5;
-    color: #E0E6ED;
 }
 
 .IconGarantia {
@@ -786,8 +786,7 @@ header {
     display: block;
 }
 
-
-/* filtros de servizos */
+/* Filtros de servizos */
 .filterSection {
     max-width: 1200px;
     margin: var(--space-6) auto;
@@ -811,6 +810,28 @@ header {
     font-weight: 700;
     color: var(--color-navy);
     white-space: nowrap;
+}
+
+.filterSort {
+    display: flex;
+    align-items: center;
+}
+
+.sortSelect {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-navy);
+    color: var(--color-navy);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font-family);
+}
+
+.sortSelect:focus-visible {
+    outline: 3px solid var(--color-blue-focus);
 }
 
 .filterButtons {
@@ -842,35 +863,10 @@ header {
     border-color: var(--color-blue-primary);
 }
 
-.filterSort {
-    display: flex;
-    align-items: center;
-}
-
-.sortSelect {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-navy);
-    color: var(--color-navy);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-    font-family: var(--font-family);
-}
-
-.sortSelect:focus-visible {
-    outline: 3px solid var(--color-blue-focus);
-}
-
-/* Clase para ocultar Interactiva para JS */
 .serviceCard.hidden {
     display: none !important;
 }
 
-
-/* estado de baleiro (#no_results) */
 .emptyState {
     background-color: #DDE2E8;
     border-radius: 8px;
@@ -914,8 +910,7 @@ header {
     color: var(--color-navy);
 }
 
-/*form contacto*/
-
+/*Form */
 .contactoSection {
     max-width: 1000px;
     margin: 0 auto;
@@ -1028,8 +1023,7 @@ header {
     background-color: #061729;
 }
 
-/*legal LOPDGDD*/
-
+/* Legal y faq */
 .legalSection {
     max-width: 1000px;
     margin: 0 auto;
@@ -1075,19 +1069,23 @@ header {
     color: var(--color-text-main);
 }
 
-/*faq*/
 .faqContainer {
-    max-width: 600px;
-    margin: 2rem auto;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1e293b;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-4) var(--space-12);
 }
 
+.faqContainer h1,
 .faqContainer h2 {
-    font-size: 1.5rem;
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #0f172a;
+    color: var(--color-navy);
+    margin-bottom: var(--space-6);
+    text-align: left;
+}
+
+.faqBox {
+    border-top: 1px solid #DDE2E8;
 }
 
 .faqItem {
@@ -1102,12 +1100,10 @@ header {
     font-weight: 600;
 }
 
-/* Efecto del triángulo*/
 .faqPregunta::-webkit-details-marker {
     display: none;
 }
 
-/* Indicador cerrado por defecto*/
 .faqPregunta::after {
     content: "+";
     font-size: 1.25rem;
@@ -1116,7 +1112,6 @@ header {
     margin-left: 1rem;
 }
 
-/* Indicador '×' cuando se abre */
 details[open] .faqPregunta::after {
     content: "×";
     font-size: 1.35rem;
@@ -1130,12 +1125,9 @@ details[open] .faqPregunta::after {
     line-height: 1.5;
 }
 
-
-/*subpaginas*/
-/*urxencias*/
+/* Subpaginas (urxencias & reformas)*/
 .emergencyBanner {
     background-color: #FCE8E6;
-    /* Tonalidade vermella suave de emerxencia */
     border: 1px solid rgba(217, 56, 30, 0.2);
     border-radius: 24px;
     padding: var(--space-6) var(--space-8);
@@ -1307,8 +1299,6 @@ details[open] .faqPregunta::after {
     flex-shrink: 0;
 }
 
-/*reformas*/
-/* tabla de materiales */
 .seccionTabla {
     max-width: 1200px;
     margin: var(--space-12) auto;
@@ -1349,7 +1339,6 @@ details[open] .faqPregunta::after {
     vertical-align: middle;
 }
 
-/* Para aplicar grid/flex real nas celas de cabeceira se necesario */
 .th-content {
     display: flex;
     align-items: center;
@@ -1386,7 +1375,6 @@ details[open] .faqPregunta::after {
 
 .textGreen {
     color: #0D823A;
-    /*Verde corporativo para especificaciones*/
     font-weight: 600;
 }
 
@@ -1394,7 +1382,7 @@ details[open] .faqPregunta::after {
     color: var(--color-navy);
 }
 
-/* footer */
+/* Footer */
 .footerContent {
     background-color: var(--color-white);
     border-top: 1px solid var(--color-border);
@@ -1459,9 +1447,608 @@ details[open] .faqPregunta::after {
     font-size: 12px;
 }
 
-/* ACCESIBILIDADE (WCAG 2.2 AA FOCUS)*/
 :focus-visible {
     outline: 3px solid var(--color-blue-focus);
-    /* #80BFFF */
     outline-offset: 2px;
+}
+
+/*  Medias queries responsive */
+
+/* Ordenador (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .serviciosGrilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+
+    .coverage-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .coverage-map {
+        height: 240px;
+    }
+
+    .sectionGrilla .grilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+}
+
+/* Ocultar botones superiores del hero en escritorio */
+.heroSection .heroText .heroActions {
+    display: none;
+}
+
+
+/* Movil (max-width: 768px) */
+@media (max-width: 768px) {
+    .headerContent {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .cta {
+        display: none !important;
+    }
+
+    .menuToggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerNavGroup {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        padding: var(--space-4) 0;
+        border-top: 1px solid var(--color-border);
+        margin-top: var(--space-3);
+        gap: var(--space-4);
+    }
+
+    .headerNavGroup.nav-active {
+        display: flex;
+    }
+
+    .nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+    }
+
+    .headerIdiomas {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        gap: var(--space-3);
+        width: 100%;
+    }
+
+    .lang-switch-pill {
+        margin-left: 0;
+    }
+
+    .headerIdiomas .btn-emergency {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dropdownMenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+        background-color: var(--color-bg-light);
+    }
+
+    /* Para reordenar el responsive de empresa.html */
+
+    .heroSection .heroContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heroSection .heroText {
+        display: contents;
+    }
+
+    .heroSection .heroText .heroActions {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-3);
+        order: 1;
+        margin-bottom: var(--space-6);
+    }
+
+    .heroSection .heroActions .btn {
+        width: 100%;
+    }
+
+    .heroSection .heroImages {
+        order: 2;
+        width: 100%;
+        height: 200px;
+        margin-bottom: var(--space-6);
+    }
+
+    .heroSection h1 {
+        order: 3;
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: var(--space-3);
+    }
+
+    .heroSection .subtitle {
+        order: 4;
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: var(--space-4);
+    }
+
+    .heroSection p:not(.subtitle) {
+        order: 5;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: var(--space-3);
+    }
+
+    .sectionGrilla .grilla {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .heroContainer {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .heroSection {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-8) var(--space-4) var(--space-12);
+        background-color: var(--color-white);
+    }
+
+    .heroImage {
+        height: 240px;
+    }
+
+    .heroContent h1 {
+        font-size: 28px;
+    }
+
+    .grilla {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .ctaContent {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .ctaContent h2 {
+        font-size: 22px;
+    }
+
+    .ctaActions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ctaActions .btn {
+        width: 100%;
+    }
+
+    .heroSubtitle {
+        font-size: 16px;
+    }
+
+    .heroActions {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-3);
+    }
+
+    .heroActions .btn {
+        width: 100%;
+    }
+
+    .serviciosGrilla {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceCard {
+        padding: var(--space-4);
+    }
+
+    .coverage-section {
+        margin-bottom: var(--space-8);
+    }
+
+    .coverage-container {
+        padding: var(--space-4);
+    }
+
+    .coverage-map {
+        height: 200px;
+    }
+
+    /* Footer Responsive */
+    .footerContent {
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-3);
+    }
+
+    .legal-nav {
+        order: 1;
+    }
+
+    .legal-nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+    }
+
+    .legal-nav a {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--color-navy);
+    }
+
+    .legal-sep {
+        font-weight: 700;
+        color: var(--color-navy);
+    }
+
+    .copyright {
+        order: 2;
+        font-size: 13px;
+        color: var(--color-text-main);
+        max-width: 220px;
+        line-height: 1.3;
+        margin: 0 auto;
+    }
+
+    .footer-social-icons {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        gap: var(--space-3);
+        margin-top: var(--space-1);
+    }
+
+    .social-link {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        color: var(--color-navy);
+        padding: 0;
+    }
+
+    .social-link:hover {
+        background-color: transparent;
+        color: var(--color-blue-primary);
+    }
+
+    .filterContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-4);
+    }
+
+    .filterLabel {
+        order: 1;
+        text-align: center;
+    }
+
+    .filterSort {
+        order: 2;
+        width: 100%;
+    }
+
+    .sortSelect {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filterButtons {
+        order: 3;
+        justify-content: center;
+        gap: var(--space-2);
+    }
+
+    .filterBtn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .sectionGrilla .grilla {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: var(--space-2);
+        border-radius: 14px;
+    }
+
+    .cardImage-wrapper {
+        height: 110px;
+        margin-bottom: var(--space-2);
+        border-radius: 10px;
+    }
+
+    .cardButton {
+        width: 100%;
+        font-size: 13px;
+        padding: 6px 4px;
+        border-radius: 8px;
+    }
+
+    /*contacto section*/
+    .contactoSection {
+        padding: var(--space-6) var(--space-4) var(--space-8);
+    }
+
+    .contactoTitle h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: var(--space-6);
+    }
+
+    .contactoForm {
+        gap: var(--space-3);
+    }
+
+    .formGroup {
+        width: 100%;
+    }
+
+    .formRowThree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3);
+    }
+
+    .formRowThree .formGroup:nth-child(3) {
+        grid-column: 1 / 2;
+    }
+
+    .formSelect {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 14px;
+    }
+
+    .formTextarea {
+        min-height: 100px;
+    }
+
+    .btnSubmit {
+        width: 100%;
+        background-color: var(--color-navy);
+        border-radius: 20px;
+        padding: 12px var(--space-4);
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    /*urxencias*/
+    .emergencyBanner {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-4) 0;
+        gap: var(--space-4);
+        background-color: transparent;
+        border: none;
+    }
+
+    .emergencyHeaderInfo {
+        align-items: center;
+    }
+
+    .emergencyTitleGroup {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-2);
+    }
+
+    /* Ocultar iconos y badges secundarios en pantalla pequeña */
+    .emergencyBellIcon,
+    .emergencyBadges,
+    .availabilityText {
+        display: none;
+    }
+
+    .emergencyTitleGroup h1 {
+        font-size: 24px;
+        color: var(--color-navy);
+    }
+
+    .emergencySubtitle {
+        font-size: 14px;
+        color: var(--color-text-sub);
+    }
+
+    .emergencyCallBox {
+        width: 100%;
+        align-items: center;
+    }
+
+    .callBtn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    /* 2. Rejilla de tarjetas de urgencias apiladas */
+    .seccionUrgencia .grilla {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .urgencyCard {
+        padding: var(--space-4);
+    }
+
+    .urgencyCardBody {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+    }
+
+    .urgencyCardImgWrapper {
+        width: 100%;
+        height: 180px;
+    }
+
+    .urgencyCardMeta {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .urgencyCardMeta h3 {
+        font-size: 18px;
+        margin-bottom: var(--space-2);
+    }
+
+    .urgencyCardMeta .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* 3. Reorganización vertical de guías y características */
+    .stepsGrid {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .stepArrow {
+        transform: rotate(90deg);
+        margin: var(--space-1) 0;
+    }
+
+    .featurePillsGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    /*reformas*/
+    /* 1. Rejilla de reformas a 1 columna */
+    .reformasGrilla {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+        padding: 0 var(--space-4);
+    }
+
+    .reformaCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .reformaCardTitle {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--color-navy);
+        text-align: center;
+        margin-bottom: var(--space-2);
+    }
+
+    /* Caja oscura contenedora */
+    .reformaCardBox {
+        background-color: var(--color-navy);
+        border: none;
+        border-radius: 20px;
+        padding: var(--space-4);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reformaImgWrapper {
+        width: 100%;
+        height: 180px;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: var(--space-4);
+    }
+
+    .reformaImgWrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Botón claro "Ver mais" */
+    .reformaCardBox .cardButton,
+    .reformaCardBox .btn {
+        background-color: #EBF3FA;
+        color: var(--color-navy);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 24px;
+        border-radius: 12px;
+        width: auto;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    /* 2. Tabla técnica de materiales */
+    .seccionTabla {
+        margin: var(--space-8) auto var(--space-12);
+        padding: 0 var(--space-4);
+    }
+
+    .seccionTabla .sectionTitulo {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--color-navy);
+        margin-bottom: var(--space-4);
+        text-align: left;
+    }
+
+    .tablaWrapper {
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+
+    .Tabla th,
+    .Tabla td {
+        padding: 10px 8px;
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .Tabla th {
+        font-weight: 700;
+    }
 }
