@@ -17,30 +17,44 @@
                 <span class="logoText">FLD</span>
             </a>
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="empresa.html">Empresa</a></li>
-                    <li><a href="servizos.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
+            <button type="button" class="menuToggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
 
-            <div class="headerIdiomas">
-                <div class="lang-switch-pill">
-                    <button type="button" class="btnIdioma active" aria-label="Galego">GAL</button>
-                    <span class="lang-sep">/</span>
-                    <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
+            <div class="headerNavGroup" id="mainNav">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="hasDropdown">
+                            <a href="servizos.html">Servizos</a>
+                            <div class="dropdownMenu">
+                                <ul class="dropdownLinks">
+                                    <li><a href="servizos/urxencias.html">Urxencias 24h</a></li>
+                                    <li><a href="servizos/reformas.html">Reformas e Instalacións</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="empresa.html">Empresa</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="headerIdiomas">
+                    <div class="lang-switch-pill">
+                        <button type="button" class="btnIdioma active" aria-label="Galego">GAL</button>
+                        <span class="lang-sep">/</span>
+                        <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
+                    </div>
+                    <a href="servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
                 </div>
             </div>
-            <div>
-                <a href="servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
-            </div>
-
         </div>
     </header>
-
     <main class="mainContent">
 
         <section class="contactoSection">
@@ -82,7 +96,7 @@
                         </div>
 
                         <div class="formGroup">
-                            <label for="preferenciaHoraria">Preferencia horaria</label>
+                            <label for="preferenciaHoraria">HORARIO</label>
                             <select id="preferenciaHoraria" name="preferenciaHoraria" class="formSelect">
                                 <option value="" disabled selected>Select option</option>
                                 <option value="manan">Mañá (08:00 - 14:00)</option>
