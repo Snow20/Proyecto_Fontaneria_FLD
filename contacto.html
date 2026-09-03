@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fontanaría Fernando López Díaz | Inicio</title>
+    <title>Fontanaría Fernando López Díaz | Contacto</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -28,19 +29,21 @@
             <div class="headerNavGroup" id="mainNav">
                 <nav class="nav">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html" data-key="nav_inicio">Inicio</a></li>
                         <li class="hasDropdown">
-                            <a href="servizos.html">Servizos</a>
+                            <a href="servizos.html" data-key="nav_servizos">Servizos</a>
                             <div class="dropdownMenu">
                                 <ul class="dropdownLinks">
-                                    <li><a href="servizos/urxencias.html">Urxencias 24h</a></li>
-                                    <li><a href="servizos/reformas.html">Reformas e Instalacións</a></li>
+                                    <li><a href="servizos/urxencias.html" data-key="nav_urxencias_sub">Urxencias 24h</a>
+                                    </li>
+                                    <li><a href="servizos/reformas.html" data-key="nav_reformas_sub">Reformas e
+                                            Instalacións</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="empresa.html">Empresa</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="empresa.html" data-key="nav_empresa">Empresa</a></li>
+                        <li><a href="contacto.html" data-key="nav_contacto">Contacto</a></li>
+                        <li><a href="faq.html" data-key="nav_faq">FAQ</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +53,8 @@
                         <span class="lang-sep">/</span>
                         <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
                     </div>
-                    <a href="servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
+                    <a href="servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </div>
@@ -59,77 +63,80 @@
 
         <section class="contactoSection">
             <div class="contactContainer">
-                <h1 class="contactoTitle">Contactanos</h1>
+                <h1 class="contactoTitle" data-key="contact_title">Contactanos</h1>
 
                 <form class="contactoForm" action="#" method="POST">
 
                     <div class="formGroup">
-                        <label for="nome">NOME E APELIDO</label>
+                        <label for="nome" data-key="label_nome">NOME E APELIDO</label>
                         <input type="text" id="nome" name="nome" placeholder="O teu nome completo" required
-                            class="formInput" minlength="3" maxlength="80" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÀàÈèÒòÇç\s]+">
+                            class="formInput" minlength="3" maxlength="80" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÀàÈèÒòÇç\s]+"
+                            data-key="label_nome">
                     </div>
 
                     <div class="formGroup">
-                        <label for="telefono">TELÉFONO</label>
+                        <label for="telefono" data-key="label_telefono">TELÉFONO</label>
                         <input type="tel" id="telefono" name="telefono" placeholder="+34 000 000 000" required
-                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}">
+                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}" data-key="label_telefono">
                     </div>
 
                     <div class="formGroup formGroupMedium">
-                        <label for="email">CORREO ELECTRÓNICO</label>
+                        <label for="email" data-key="label_email">CORREO ELECTRÓNICO</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@correo.com" required
-                            class="formInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            class="formInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-key="label_email">
                     </div>
 
                     <div class="formRowThree">
                         <div class="formGroup">
-                            <label for="tipoServizo">Tipo servizo</label>
+                            <label for="tipoServizo" data-key="label_servizo">Tipo servizo</label>
                             <select id="tipoServizo" name="tipoServizo" class="formSelect">
                                 <option value="" disabled selected>Select option</option>
-                                <option value="urxencias">Urxencias 24h</option>
-                                <option value="reparacions">Reparacións</option>
-                                <option value="instalacions">Instalacións</option>
-                                <option value="calefaccion">Calefacción</option>
-                                <option value="reformas">Reformas</option>
-                                <option value="mantemento">Mantemento</option>
+                                <option value="urxencias" data-key="opt_urxencias">Urxencias 24h</option>
+                                <option value="reparacions" data-key="opt_reparacions">Reparacións</option>
+                                <option value="instalacions" data-key="opt_instalacions">Instalacións</option>
+                                <option value="calefaccion" data-key="opt_calefaccion">Calefacción</option>
+                                <option value="reformas" data-key="opt_reformas">Reformas</option>
+                                <option value="mantemento" data-key="opt_mantemento">Mantemento</option>
                             </select>
                         </div>
 
                         <div class="formGroup">
-                            <label for="preferenciaHoraria">HORARIO</label>
+                            <label for="preferenciaHoraria" data-key="label_horario">HORARIO</label>
                             <select id="preferenciaHoraria" name="preferenciaHoraria" class="formSelect">
                                 <option value="" disabled selected>Select option</option>
-                                <option value="manan">Mañá (08:00 - 14:00)</option>
-                                <option value="tarde">Tarde (14:00 - 20:00)</option>
-                                <option value="urxente">Indiferente / Urxente</option>
+                                <option value="manan" data-key="opt_manan">Mañá (08:00 - 14:00)</option>
+                                <option value="tarde" data-key="opt_tarde">Tarde (14:00 - 20:00)</option>
+                                <option value="urxente" data-key="opt_urxente">Indiferente / Urxente</option>
                             </select>
                         </div>
 
                         <div class="formGroup">
-                            <label for="orzamentoAproximado">Orzamento</label>
+                            <label for="orzamentoAproximado" data-key="label_orzamento">Orzamento</label>
                             <select id="orzamentoAproximado" name="orzamentoAproximado" class="formSelect">
                                 <option value="" disabled selected>Select option</option>
-                                <option value="baixo">&lt; 100€</option>
-                                <option value="medio">100€ - 500€</option>
-                                <option value="alto">&gt; 500€</option>
+                                <option value="baixo" data-key="opt_baixo">&lt; 100€</option>
+                                <option value="medio" data-key="opt_medio">100€ - 500€</option>
+                                <option value="alto" data-key="opt_alto">&gt; 500€</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="formGroup">
-                        <label for="mensaxe">MENSAXE</label>
+                        <label for="mensaxe" data-key="label_mensaxe">MENSAXE</label>
                         <textarea id="mensaxe" name="mensaxe" rows="5" placeholder="En que podemos axudarche?" required
-                            class="formInput formTextarea" minlength="10" maxlength="1000"></textarea>
+                            class="formInput formTextarea" minlength="10" maxlength="1000"
+                            data-key="label_mensaxe"></textarea>
                     </div>
 
                     <div class="formCheckboxGroup">
                         <input type="checkbox" id="privacidade" name="privacidade" required>
-                        <label for="privacidade">Lin e acepto a política de privacidade. E os termos de servizo.</label>
+                        <label for="privacidade" data-key="privacy_accept">Lin e acepto a política de privacidade. E
+                            os termos de servizo.</label>
 
 
                     </div>
 
-                    <button type="submit" class="btn btnSubmit">ENVIAR MENSAXE</button>
+                    <button type="submit" class="btn btnSubmit" data-key="contact_btn">ENVIAR MENSAXE</button>
 
                 </form>
             </div>
@@ -162,15 +169,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_aviso  ">Aviso Legal</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_           cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>
