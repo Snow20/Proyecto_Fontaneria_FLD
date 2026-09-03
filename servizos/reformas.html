@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontanaría Fernando López Díaz | reformas</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -28,19 +29,21 @@
             <div class="headerNavGroup" id="mainNav">
                 <nav class="nav">
                     <ul>
-                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html" data-key="home">Inicio</a></li>
                         <li class="hasDropdown">
-                            <a href="../servizos.html">Servizos</a>
+                            <a href="../servizos.html" data-key="services">Servizos</a>
                             <div class="dropdownMenu">
                                 <ul class="dropdownLinks">
-                                    <li><a href="../servizos/urxencias.html">Urxencias 24h</a></li>
-                                    <li><a href="../servizos/reformas.html">Reformas e Instalacións</a></li>
+                                    <li><a href="../servizos/urxencias.html" data-key="emergency_services">Urxencias
+                                            24h</a></li>
+                                    <li><a href="../servizos/reformas.html" data-key="ref_services">Reformas e
+                                            Instalacións</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="../empresa.html">Empresa</a></li>
-                        <li><a href="../contacto.html">Contacto</a></li>
-                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../empresa.html" data-key="company">Empresa</a></li>
+                        <li><a href="../contacto.html" data-key="contact">Contacto</a></li>
+                        <li><a href="../faq.html" data-key="faq">FAQ</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +53,8 @@
                         <span class="lang-sep">/</span>
                         <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
                     </div>
-                    <a href="../servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
+                    <a href="../servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </div>
@@ -62,24 +66,24 @@
             <div class="reformasGrilla">
 
                 <div class="reformaCard">
-                    <h2 class="reformaCardTitle">Particulares Baños e cociñas</h2>
+                    <h2 class="reformaCardTitle" data-key="ref_card1_title">Particulares Baños e cociñas</h2>
                     <div class="reformaCardBox">
                         <div class="reformaImgWrapper">
                             <img src="../assets/images/reformas.jpg" alt="Reformas de baños e cociñas para particulares"
                                 loading="lazy">
                         </div>
-                        <a href="../contacto.html" class="btn btn-info">Máis info</a>
+                        <a href="../contacto.html" class="btn btn-info" data-key="btn_more_info">Máis info</a>
                     </div>
                 </div>
 
                 <div class="reformaCard">
-                    <h2 class="reformaCardTitle">Comunidade Baixantes e redes</h2>
+                    <h2 class="reformaCardTitle" data-key="ref_card2_title">Comunidade Baixantes e redes</h2>
                     <div class="reformaCardBox">
                         <div class="reformaImgWrapper">
                             <img src="../assets/images/comunidade.jpg"
                                 alt="Instalacións de baixantes e redes para comunidades" loading="lazy">
                         </div>
-                        <a href="../contacto.html" class="btn btn-info">Máis info</a>
+                        <a href="../contacto.html" class="btn btn-info" data-key="btn_more_info">Máis info</a>
                     </div>
                 </div>
 
@@ -87,7 +91,7 @@
         </section>
 
         <section class="seccionTabla">
-            <h2 class="sectionTitulo">TÁBOA TÉCNICA DE MATERIAIS HOMOLOGADOS</h2>
+            <h2 class="sectionTitulo" data-key="ref_table_title">TÁBOA TÉCNICA DE MATERIAIS HOMOLOGADOS</h2>
 
             <div class="tablaWrapper">
                 <table class="Tabla">
@@ -95,27 +99,27 @@
                         <tr>
                             <th>
                                 <div class="th-content">
-                                    <span>Material</span>
+                                    <span data-key="ref_th_material">Material</span>
                                     <svg class="tablaArrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                         stroke="currentColor" stroke-width="2">
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 </div>
                             </th>
-                            <th>StatusEspecificación</th>
-                            <th>Normativa</th>
+                            <th data-key="ref_th_spec">Especificación</th>
+                            <th data-key="ref_th_norm">Normativa</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tubería Cobre / PEX</td>
-                            <td class="textGreen">UNE-EN 1057</td>
-                            <td>CTM-2026</td>
+                            <td data-key="ref_row1_mat">Tubería Cobre / PEX</td>
+                            <td class="textGreen" data-key="ref_row1_spec">UNE-EN 1057</td>
+                            <td data-key="ref_row1_norm">CTM-2026</td>
                         </tr>
                         <tr>
-                            <td>Panel illante</td>
-                            <td class="textGreen">Resistencia Térmica R3</td>
-                            <td>ISO-9001</td>
+                            <td data-key="ref_row2_mat">Panel aislante</td>
+                            <td class="textGreen" data-key="ref_row2_spec">Resistencia Térmica R3</td>
+                            <td data-key="ref_row2_norm">ISO-9001</td>
                         </tr>
                     </tbody>
                 </table>
@@ -150,15 +154,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_aviso">Aviso Legal</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>
