@@ -65,33 +65,47 @@
             <div class="contactContainer">
                 <h1 class="contactoTitle" data-key="contact_title">Contactanos</h1>
 
-                <form class="contactoForm" action="#" method="POST">
+                <!-- Contenedor de confirmación de envío (oculto por defecto) -->
+                <div id="formSuccess" class="formSuccess hidden" role="alert" tabindex="-1">
+                    <h3>Mensaxe enviada con éxito</h3>
+                    <p>Grazas por contactar connosco. Responderemos nun prazo máximo de 24 horas.</p>
+                </div>
+
+                <form class="contactoForm" action="#" method="POST" id="contactoForm" novalidate>
 
                     <div class="formGroup">
-                        <label for="nome" data-key="label_nome">NOME E APELIDO</label>
+                        <label for="nome"><span data-key="label_nome">NOME E APELIDO</span> <span
+                                class="req">*</span></label>
                         <input type="text" id="nome" name="nome" placeholder="O teu nome completo" required
                             class="formInput" minlength="3" maxlength="80" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÀàÈèÒòÇç\s]+"
-                            data-key="label_nome">
+                            data-key="placeholder_nome" aria-required="true" aria-describedby="nomeError">
+                        <span id="nomeError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
                     <div class="formGroup">
-                        <label for="telefono" data-key="label_telefono">TELÉFONO</label>
+                        <label for="telefono"><span data-key="label_telefono">TELÉFONO</span> <span
+                                class="req">*</span></label>
                         <input type="tel" id="telefono" name="telefono" placeholder="+34 000 000 000" required
-                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}" data-key="label_telefono">
+                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}" data-key="placeholder_telefono"
+                            aria-required="true" aria-describedby="telefonoError">
+                        <span id="telefonoError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
                     <div class="formGroup formGroupMedium">
-                        <label for="email" data-key="label_email">CORREO ELECTRÓNICO</label>
+                        <label for="email"><span data-key="label_email">CORREO ELECTRÓNICO</span> <span
+                                class="req">*</span></label>
                         <input type="email" id="email" name="email" placeholder="exemplo@correo.com" required
-                            class="formInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-key="label_email">
+                            class="formInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            data-key="placeholder_email" aria-required="true" aria-describedby="emailError">
+                        <span id="emailError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
                     <div class="formRowThree">
                         <div class="formGroup">
                             <label for="tipoServizo" data-key="label_servizo">Tipo servizo</label>
                             <select id="tipoServizo" name="tipoServizo" class="formSelect">
-                                <option value="" disabled selected>Select option</option>
-                                <option value="urxencias" data-key="opt_urxencias">Urxencias 24h</option>
+                                <option value="" disabled selected data-key="select_default">Select option</option>
+                                <option value="urxencias" data-key="opt_urxencias_24h">Urxencias 24h</option>
                                 <option value="reparacions" data-key="opt_reparacions">Reparacións</option>
                                 <option value="instalacions" data-key="opt_instalacions">Instalacións</option>
                                 <option value="calefaccion" data-key="opt_calefaccion">Calefacción</option>
@@ -103,7 +117,7 @@
                         <div class="formGroup">
                             <label for="preferenciaHoraria" data-key="label_horario">HORARIO</label>
                             <select id="preferenciaHoraria" name="preferenciaHoraria" class="formSelect">
-                                <option value="" disabled selected>Select option</option>
+                                <option value="" disabled selected data-key="select_default">Select option</option>
                                 <option value="manan" data-key="opt_manan">Mañá (08:00 - 14:00)</option>
                                 <option value="tarde" data-key="opt_tarde">Tarde (14:00 - 20:00)</option>
                                 <option value="urxente" data-key="opt_urxente">Indiferente / Urxente</option>
@@ -113,27 +127,30 @@
                         <div class="formGroup">
                             <label for="orzamentoAproximado" data-key="label_orzamento">Orzamento</label>
                             <select id="orzamentoAproximado" name="orzamentoAproximado" class="formSelect">
-                                <option value="" disabled selected>Select option</option>
-                                <option value="baixo" data-key="opt_baixo">&lt; 100€</option>
-                                <option value="medio" data-key="opt_medio">100€ - 500€</option>
-                                <option value="alto" data-key="opt_alto">&gt; 500€</option>
+                                <option value="" disabled selected data-key="select_default">Select option</option>
+                                <option value="baixo">&lt; 100€</option>
+                                <option value="medio">100€ - 500€</option>
+                                <option value="alto">&gt; 500€</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="formGroup">
-                        <label for="mensaxe" data-key="label_mensaxe">MENSAXE</label>
+                        <label for="mensaxe"><span data-key="label_mensaxe">MENSAXE</span> <span
+                                class="req">*</span></label>
                         <textarea id="mensaxe" name="mensaxe" rows="5" placeholder="En que podemos axudarche?" required
                             class="formInput formTextarea" minlength="10" maxlength="1000"
-                            data-key="label_mensaxe"></textarea>
+                            data-key="placeholder_mensaxe" aria-required="true"
+                            aria-describedby="mensaxeError"></textarea>
+                        <span id="mensaxeError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
                     <div class="formCheckboxGroup">
-                        <input type="checkbox" id="privacidade" name="privacidade" required>
-                        <label for="privacidade" data-key="privacy_accept">Lin e acepto a política de privacidade. E
-                            os termos de servizo.</label>
-
-
+                        <input type="checkbox" id="privacidade" name="privacidade" required aria-required="true"
+                            aria-describedby="privacidadeError">
+                        <label for="privacidade" data-key="privacy_accept">Lin e acepto a política de privacidade e os
+                            termos de servizo.</label>
+                        <span id="privacidadeError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
                     <button type="submit" class="btn btnSubmit" data-key="contact_btn">ENVIAR MENSAXE</button>
