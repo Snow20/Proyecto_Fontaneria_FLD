@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontanaría Fernando López Díaz | Urxencias 24h</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -28,19 +29,21 @@
             <div class="headerNavGroup" id="mainNav">
                 <nav class="nav">
                     <ul>
-                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html" data-key="nav_inicio">Inicio</a></li>
                         <li class="hasDropdown">
-                            <a href="../servizos.html">Servizos</a>
+                            <a href="../servizos.html" data-key="nav_servizos">Servizos</a>
                             <div class="dropdownMenu">
                                 <ul class="dropdownLinks">
-                                    <li><a href="../servizos/urxencias.html">Urxencias 24h</a></li>
-                                    <li><a href="../servizos/reformas.html">Reformas e Instalacións</a></li>
+                                    <li><a href="../servizos/urxencias.html" data-key="nav_urxencias_sub">Urxencias
+                                            24h</a></li>
+                                    <li><a href="../servizos/reformas.html" data-key="nav_reformas_sub">Reformas e
+                                            Instalacións</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="../empresa.html">Empresa</a></li>
-                        <li><a href="../contacto.html">Contacto</a></li>
-                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../empresa.html" data-key="nav_empresa">Empresa</a></li>
+                        <li><a href="../contacto.html" data-key="nav_contacto">Contacto</a></li>
+                        <li><a href="../faq.html" data-key="nav_faq">FAQ</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +53,8 @@
                         <span class="lang-sep">/</span>
                         <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
                     </div>
-                    <a href="../servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
+                    <a href="../servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </div>
@@ -68,8 +72,9 @@
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                         </svg>
                         <div>
-                            <h1>Urxencias <span>24 horas</span></h1>
-                            <p class="emergencySubtitle">Atención inmediata os 365 días do ano.</p>
+                            <h1 data-key="urg_banner_title">Urxencias <span>24 horas</span></h1>
+                            <p class="emergencySubtitle" data-key="urg_banner_sub">Atención inmediata os 365 días do
+                                ano.</p>
                         </div>
                     </div>
 
@@ -80,14 +85,14 @@
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
-                            <span>Resposta Rápida</span>
+                            <span data-key="urg_badge_1">Resposta Rápida</span>
                         </div>
                         <div class="badgeItem">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
-                            <span>Profesionais Cualificados</span>
+                            <span data-key="urg_badge_2">Profesionais Cualificados</span>
                         </div>
                         <div class="badgeItem">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -96,7 +101,7 @@
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                                 </path>
                             </svg>
-                            <span>Atención Inmediata</span>
+                            <span data-key="urg_badge_3">Atención Inmediata</span>
                         </div>
                     </div>
                 </div>
@@ -109,13 +114,13 @@
                         </svg>
                         Llamar ahora: 600 000 000
                     </a>
-                    <span class="availabilityText">Estamos dispoñibles 24/7</span>
+                    <span class="availabilityText" data-key="urg_availability">Estamos dispoñibles 24/7</span>
                 </div>
             </div>
         </section>
 
         <section class="seccionUrgencia">
-            <h2 class="tituloCentrado">Os nosos servizos de urxencia</h2>
+            <h2 class="tituloCentrado" data-key="urg_services_title">Os nosos servizos de urxencia</h2>
 
             <div class="grilla">
 
@@ -126,8 +131,8 @@
                             <img src="../assets/images/urxencias24h.jpg" alt="Urxencias" loading="lazy">
                         </div>
                         <div class="urgencyCardMeta">
-                            <h3>Fugas e roturas</h3>
-                            <a href="../contacto.html" class="btn btn-info">Máis info</a>
+                            <h3 data-key="urg_card1_title">Fugas e roturas</h3>
+                            <a href="../contacto.html" class="btn btn-info" data-key="btn_more_info">Máis info</a>
                         </div>
                     </div>
                 </div>
@@ -139,8 +144,8 @@
                             <img src="../assets/images/reparacions.jpg" alt="Reparacions" loading="lazy">
                         </div>
                         <div class="urgencyCardMeta">
-                            <h3>Avaría de caldeira</h3>
-                            <a href="../contacto.html" class="btn btn-info">Máis info</a>
+                            <h3 data-key="urg_card2_title">Avaría de caldeira</h3>
+                            <a href="../contacto.html" class="btn btn-info" data-key="btn_more_info">Máis info</a>
                         </div>
                     </div>
                 </div>
@@ -152,8 +157,8 @@
                             <img src="../assets/images/calefaccion.jpg" alt="Calefaccions" loading="lazy">
                         </div>
                         <div class="urgencyCardMeta">
-                            <h3>Calefacción</h3>
-                            <a href="../contacto.html" class="btn btn-info">Máis info</a>
+                            <h3 data-key="urg_card3_title">Calefacción</h3>
+                            <a href="../contacto.html" class="btn btn-info" data-key="btn_more_info">Máis info</a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +167,7 @@
         </section>
 
         <section class="guiasPasosSeccion">
-            <h2 class="tituloCentrado">Guía visual: 3 pasos sinxelos</h2>
+            <h2 class="tituloCentrado" data-key="urg_steps_title">Guía visual: 3 pasos sinxelos</h2>
 
             <div class="stepsGrid">
 
@@ -171,8 +176,8 @@
                     <div class="stepHeader">
                         <div class="stepNumber">1</div>
                         <div class="stepText">
-                            <h3>Contacta connosco:</h3>
-                            <p>Chámanos ou escríbenos</p>
+                            <h3 data-key="urg_step1_title">Contacta connosco:</h3>
+                            <p data-key="urg_step1_text">Chámanos ou escríbenos</p>
                         </div>
                     </div>
                     <div class="stepIcon">
@@ -197,8 +202,8 @@
                     <div class="stepHeader">
                         <div class="stepNumber">2</div>
                         <div class="stepText">
-                            <h3>Avaliamos o problema:</h3>
-                            <p>Un técnico avaliará a avaría e propoñerá a mellor solución.</p>
+                            <h3 data-key="urg_step2_title">Avaliamos o problema:</h3>
+                            <p data-key="urg_step2_text">Un técnico avaliará a avaría e propoñerá a mellor solución.</p>
                         </div>
                     </div>
                     <div class="stepIcon">
@@ -224,8 +229,8 @@
                     <div class="stepHeader">
                         <div class="stepNumber">3</div>
                         <div class="stepText">
-                            <h3>Solucionamos rapidamente:</h3>
-                            <p>Acudimos ao teu domicilio e resolvemos o problema.</p>
+                            <h3 data-key="urg_step3_title">Solucionamos rapidamente:</h3>
+                            <p data-key="urg_step3_text">Acudimos ao teu domicilio e resolvemos o problema.</p>
                         </div>
                     </div>
                     <div class="stepIcon">
@@ -247,7 +252,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
-                    <span>Garantía de calidade</span>
+                    <span data-key="feature_guarantee">Garantía de calidade</span>
                 </div>
 
                 <div class="featurePill">
@@ -255,7 +260,7 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    <span>Cobertura local</span>
+                    <span data-key="feature_coverage">Cobertura local</span>
                 </div>
 
                 <div class="featurePill">
@@ -265,7 +270,7 @@
                         <line x1="8" y1="2" x2="8" y2="6"></line>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <span>365 días do ano</span>
+                    <span data-key="feature_365_days">365 días do ano</span>
                 </div>
 
                 <div class="featurePill">
@@ -273,7 +278,7 @@
                         <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                         <line x1="1" y1="10" x2="23" y2="10"></line>
                     </svg>
-                    <span>Prezos transparentes</span>
+                    <span data-key="feature_transparent_prices">Prezos transparentes</span>
                 </div>
 
             </div>
@@ -306,15 +311,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="copyright"> &copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
-                    <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
-                    <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_notice">Aviso Legal</a></li>
+                    <span class="legal-sep" data-key="legal_separator">|</span>
+                    <li><a href="legal.html#privacidade" data-key="privacy">Privacidade</a></li>
+                    <span class="legal-sep" data-key="legal_separator">|</span>
+                    <li><a href="legal.html#cookies" data-key="cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>
