@@ -155,15 +155,22 @@ header {
     color: var(--color-blue-primary);
 }
 
-/* DROPDOWN MENU */
+/* Dropdown menu */
 .nav .hasDropdown {
     position: relative;
+    padding-bottom: 12px;
+    margin-bottom: -12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .dropdownMenu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
     width: 220px;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
@@ -172,16 +179,25 @@ header {
     padding: var(--space-2) 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(8px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition-delay: 0.3s;
     z-index: 110;
+}
+
+.dropdownMenu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 12px;
 }
 
 .nav .hasDropdown:hover .dropdownMenu,
 .nav .hasDropdown:focus-within .dropdownMenu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transition-delay: 0s;
 }
 
 .dropdownLinks {
@@ -1305,6 +1321,31 @@ details[open] .faqPregunta::after {
     padding: 0 var(--space-4);
 }
 
+.tableSearchContainer {
+    margin-bottom: var(--space-4);
+    max-width: 500px;
+}
+
+.Tabla th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.Tabla th.sortable:hover {
+    background-color: var(--color-bg-light);
+}
+
+.Tabla th.asc .tablaArrow {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+}
+
+.Tabla th.desc .tablaArrow {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
 .sectionTitulo {
     font-size: 24px;
     font-weight: 700;
@@ -1540,20 +1581,61 @@ details[open] .faqPregunta::after {
     }
 
     .headerIdiomas .btn-emergency {
-        margin-left: 0;
+        position: static;
         width: 100%;
     }
 
-    .dropdownMenu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border: none;
+    .nav .hasDropdown {
+        position: relative;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdownMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 6px auto 0 70px !important;
+        transform: none !important;
+        width: 230px;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        padding: var(--space-2) 0;
+        z-index: 120;
+    }
+
+    .nav .hasDropdown.dropdown-open .dropdownMenu {
+        display: block;
+
+    }
+
+    .dropdownLinks {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdownLinks a {
+        display: block;
+        padding: var(--space-2) var(--space-4);
+        color: var(--color-text-main);
+        font-size: 14px;
+        font-weight: 500;
         text-align: center;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdownLinks a:hover {
         background-color: var(--color-bg-light);
+        color: var(--color-blue-primary);
     }
 
     /* Para reordenar el responsive de empresa.html */
