@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontanaría Fernando López Díaz | Servizos</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -28,19 +29,21 @@
             <div class="headerNavGroup" id="mainNav">
                 <nav class="nav">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html" data-key="nav_inicio">Inicio</a></li>
                         <li class="hasDropdown">
-                            <a href="servizos.html">Servizos</a>
+                            <a href="servizos.html" data-key="nav_servizos">Servizos</a>
                             <div class="dropdownMenu">
                                 <ul class="dropdownLinks">
-                                    <li><a href="servizos/urxencias.html">Urxencias 24h</a></li>
-                                    <li><a href="servizos/reformas.html">Reformas e Instalacións</a></li>
+                                    <li><a href="servizos/urxencias.html" data-key="nav_urxencias_sub">Urxencias 24h</a>
+                                    </li>
+                                    <li><a href="servizos/reformas.html" data-key="nav_reformas_sub">Reformas e
+                                            Instalacións</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="empresa.html">Empresa</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="empresa.html" data-key="nav_empresa">Empresa</a></li>
+                        <li><a href="contacto.html" data-key="nav_contacto">Contacto</a></li>
+                        <li><a href="faq.html" data-key="nav_faq">FAQ</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +53,8 @@
                         <span class="lang-sep">/</span>
                         <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
                     </div>
-                    <a href="servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
+                    <a href="servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </div>
@@ -60,23 +64,30 @@
 
         <section class="filterSection">
             <div class="filterContainer">
-                <span class="filterLabel">Filtrados combinados:</span>
+                <span class="filterLabel" data-key="filter_label">Filtrados combinados:</span>
 
                 <div class="filterButtons">
-                    <button type="button" class="filterBtn active-filter" data-category="all">Todas</button>
-                    <button type="button" class="filterBtn" data-category="urxencias">Urxencias</button>
-                    <button type="button" class="filterBtn" data-category="reparacions">Reparacións</button>
-                    <button type="button" class="filterBtn" data-category="reformas">Reformas</button>
-                    <button type="button" class="filterBtn" data-category="calefaccion">Calefacción</button>
-                    <button type="button" class="filterBtn" data-category="instalacions">Instalacións</button>
-                    <button type="button" class="filterBtn" data-category="mantemento">Mantemento</button>
+                    <button type="button" class="filterBtn active-filter" data-category="all"
+                        data-key="filter_all">Todas</button>
+                    <button type="button" class="filterBtn" data-category="urxencias"
+                        data-key="filter_urxencias">Urxencias</button>
+                    <button type="button" class="filterBtn" data-category="reparacions"
+                        data-key="filter_reparacions">Reparacións</button>
+                    <button type="button" class="filterBtn" data-category="reformas"
+                        data-key="filter_reformas">Reformas</button>
+                    <button type="button" class="filterBtn" data-category="calefaccion"
+                        data-key="filter_calefaccion">Calefacción</button>
+                    <button type="button" class="filterBtn" data-category="instalacions"
+                        data-key="filter_instalacions">Instalacións</button>
+                    <button type="button" class="filterBtn" data-category="mantemento"
+                        data-key="filter_mantemento">Mantemento</button>
                 </div>
 
                 <div class="filterSort">
                     <select id="sortPrice" class="sortSelect" aria-label="Orzar por prezo">
-                        <option value="default">ORZAMENTO</option>
-                        <option value="asc">Prezo: Menor a Maior</option>
-                        <option value="desc">Prezo: Maior a Menor</option>
+                        <option value="default" data-key="sort_default">ORZAMENTO</option>
+                        <option value="asc" data-key="sort_asc">Prezo: Menor a Maior</option>
+                        <option value="desc" data-key="sort_desc">Prezo: Maior a Menor</option>
                     </select>
                 </div>
             </div>
@@ -90,7 +101,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/urxencias24h.jpg" alt="Servizo de Urxencias 24h" loading="lazy">
                     </div>
-                    <a href="servizos/urxencias.html" class="cardButton">
+                    <a href="servizos/urxencias.html" class="cardButton" data-key="card_urxencias">
                         Servizo 1 - 50€<br>Urxencias 24h
                     </a>
                 </article>
@@ -100,7 +111,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/reparacions.jpg" alt="Reparacións de fugas" loading="lazy">
                     </div>
-                    <a href="contacto.html?servicio=reparacions" class="cardButton">
+                    <a href="contacto.html?servicio=reparacions" class="cardButton" data-key="card_reparacions">
                         Servizo 2 - 120€<br>Reparacións de fugas
                     </a>
                 </article>
@@ -110,7 +121,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/instalacionsanitaria.jpg" alt="Instalacións Sanitarias" loading="lazy">
                     </div>
-                    <a href="contacto.html?servicio=instalacions" class="cardButton">
+                    <a href="contacto.html?servicio=instalacions" class="cardButton" data-key="card_instalacions">
                         Servizo 3 - 350€<br>Instalacións Sanitaria
                     </a>
                 </article>
@@ -120,7 +131,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/calefaccion.jpg" alt="Calefacción" loading="lazy">
                     </div>
-                    <a href="contacto.html?servicio=calefaccion" class="cardButton">
+                    <a href="contacto.html?servicio=calefaccion" class="cardButton" data-key="card_calefaccion">
                         Servizo 4 - 80€<br>Calefacción
                     </a>
                 </article>
@@ -130,7 +141,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/reformas.jpg" alt="Reformas Integrais" loading="lazy">
                     </div>
-                    <a href="servizos/reformas.html" class="cardButton">
+                    <a href="servizos/reformas.html" class="cardButton" data-key="card_reformas">
                         Servizo 5 - 200€<br>Reforma Integrais
                     </a>
                 </article>
@@ -140,7 +151,7 @@
                     <div class="cardImage-wrapper">
                         <img src="assets/images/mantenimiento.jpg" alt="Mantemento" loading="lazy">
                     </div>
-                    <a href="contacto.html?servicio=mantemento" class="cardButton">
+                    <a href="contacto.html?servicio=mantemento" class="cardButton" data-key="card_mantemento">
                         Servizo 6 - 400€<br>Mantemento
                     </a>
                 </article>
@@ -190,15 +201,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_aviso">Aviso Legal</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>
