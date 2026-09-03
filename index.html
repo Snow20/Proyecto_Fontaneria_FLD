@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -30,29 +31,32 @@
             <div class="headerNavGroup" id="mainNav">
                 <nav class="nav">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html" data-key="nav_inicio">Inicio</a></li>
                         <li class="hasDropdown">
-                            <a href="servizos.html">Servizos</a>
+                            <a href="servizos.html" data-key="nav_servizos">Servizos</a>
                             <div class="dropdownMenu">
                                 <ul class="dropdownLinks">
-                                    <li><a href="servizos/urxencias.html">Urxencias 24h</a></li>
-                                    <li><a href="servizos/reformas.html">Reformas e Instalacións</a></li>
+                                    <li><a href="servizos/urxencias.html" data-key="nav_urxencias_sub">Urxencias 24h</a>
+                                    </li>
+                                    <li><a href="servizos/reformas.html" data-key="nav_reformas_sub">Reformas e
+                                            Instalacións</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="empresa.html">Empresa</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="empresa.html" data-key="nav_empresa">Empresa</a></li>
+                        <li><a href="contacto.html" data-key="nav_contacto">Contacto</a></li>
+                        <li><a href="faq.html" data-key="nav_faq">FAQ</a></li>
                     </ul>
                 </nav>
 
                 <div class="headerIdiomas">
                     <div class="lang-switch-pill">
-                        <button type="button" class="btnIdioma active" aria-label="Galego">GAL</button>
+                        <button type="button" class="btnIdioma" data-lang="gl" aria-label="Galego">GAL</button>
                         <span class="lang-sep">/</span>
-                        <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
+                        <button type="button" class="btnIdioma" data-lang="es" aria-label="Castelán">ESP</button>
                     </div>
-                    <a href="servizos/urxencias.html" class="btn btn-emergency">Urxencias 24h</a>
+                    <a href="servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </div>
@@ -62,11 +66,13 @@
 
         <section class="heroSection">
             <div class="heroContent">
-                <h1>Fontaneria Fernando Lopez Diaz</h1>
-                <p class="heroSubtitle">O valor dos nosos servizos e calidade. Texto texto máis texto.</p>
+                <h1 data-key="banner_title">Fontaneria Fernando Lopez Diaz</h1>
+                <p class="heroSubtitle" data-key="banner_subtitle">O valor dos nosos servizos e calidade. Texto texto
+                    máis texto.</p>
                 <div class="heroActions">
-                    <a href="contacto.html" class="btn btn-navy">Orzamento</a>
-                    <a href="servizos/urxencias.html" class="btn btn-outline-red">Urxencias 24h</a>
+                    <a href="contacto.html" class="btn btn-navy" data-key="btn_orzamento">Orzamento</a>
+                    <a href="servizos/urxencias.html" class="btn btn-outline-red" data-key="btn_urxencias">Urxencias
+                        24h</a>
                 </div>
             </div>
         </section>
@@ -78,28 +84,28 @@
                     <div class="card-image-wrapper">
                         <img src="assets/images/urxencias24h.jpg" alt="Urxencias 24h" loading="lazy">
                     </div>
-                    <a href="servizos/urxencias.html" class="cardButton">Urxencias 24h</a>
+                    <a href="servizos/urxencias.html" class="cardButton" data-key="card_urxencias">Urxencias 24h</a>
                 </div>
 
                 <div class="serviceCard">
                     <div class="card-image-wrapper">
                         <img src="assets/images/reparacions.jpg" alt="Reparacións" loading="lazy">
                     </div>
-                    <a href="servizos.html" class="cardButton">Reparacións</a>
+                    <a href="servizos.html" class="cardButton" data-key="card_reparacions">Reparacións</a>
                 </div>
 
                 <div class="serviceCard">
                     <div class="card-image-wrapper">
                         <img src="assets/images/reformas.jpg" alt="Reformas" loading="lazy">
                     </div>
-                    <a href="servizos/reformas.html" class="cardButton">Reformas</a>
+                    <a href="servizos/reformas.html" class="cardButton" data-key="card_reformas">Reformas</a>
                 </div>
 
                 <div class="serviceCard">
                     <div class="card-image-wrapper">
                         <img src="assets/images/calefaccion.jpg" alt="Calefaccións" loading="lazy">
                     </div>
-                    <a href="servizos.html" class="cardButton">Calefaccións</a>
+                    <a href="servizos.html" class="cardButton" data-key="card_calefaccion">Calefaccións</a>
                 </div>
 
             </div>
@@ -116,10 +122,10 @@
                     </iframe>
                 </div>
                 <div class="coverage-info" align="center">
-                    <h2>Cobertura local<br>Zonas / Horarios</h2>
-                    <p class="ubicacion-text">Sofán, Carballo, Bergantiños</p>
-                    <p class="horario-text">Horarios: L-V 08:00 - 20:00</p>
-                    <p class="emergencia-text">Atención urxente 24/7</p>
+                    <h2 data-key="coverage_title">Cobertura local<br>Zonas / Horarios</h2>
+                    <p class="ubicacion-text" data-key="coverage_location">Sofán, Carballo, Bergantiños</p>
+                    <p class="horario-text" data-key="coverage_schedule">Horarios: L-V 08:00 - 20:00</p>
+                    <p class="emergencia-text" data-key="coverage_urgent">Atención urxente 24/7</p>
                 </div>
             </div>
         </section>
@@ -151,15 +157,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html">Aviso Legal</a></li>
+                    <li><a href="legal.html" data-key="legal_aviso">Aviso Legal</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>
