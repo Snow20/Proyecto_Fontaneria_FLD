@@ -137,6 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'placeholder_email': 'exemplo@correo.com',
             'placeholder_mensaxe': 'En que podemos axudarche?',
             'contact_btn': 'ENVIAR MENSAXE',
+            'form_success': 'Mensaxe enviada con éxito',
+            'form_success_text': 'Grazas por contactar connosco. Responderemos nun prazo máximo de 24 horas.',
 
             // Pie de página e Legal
             'footer_copyright': '© 2026 FLD. Todos os dereitos reservados.',
@@ -274,6 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
             'placeholder_email': 'ejemplo@correo.com',
             'placeholder_mensaxe': '¿En qué podemos ayudarte?',
             'contact_btn': 'ENVIAR MENSAJE',
+            'form_success': 'Mensaxe enviada con éxito',
+            'form_success_text': 'Gracias por contactar con nosotros. Responderemos en un plazo máximo de 24 horas.',
+
 
             // Pie de página e Legal
             'footer_copyright': '© 2026 FLD. Todos los derechos reservados.',
@@ -452,16 +457,90 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Validacion del form de contacto
 
     const initContactFormValidation = () => {
-        const contactForm = document.querySelector('.contactoForm');
+        const contactForm = document.getElementById('contactoForm');
+        const formSuccess = document.getElementById('formSuccess');
         if (!contactForm) return;
 
-        contactForm.addEventListener('submit', (e) => {
-            const checkboxPrivacidade = document.getElementById('privacidade');
+        const setFieldError = (field, errorSpan, message) => {
+            field.setAttribute('aria-invalid', 'true');
+            if (errorSpan) errorSpan.textContent = message;
+        };
 
-            if (checkboxPrivacidade && !checkboxPrivacidade.checked) {
-                e.preventDefault();
-                alert('Debes aceptar a política de privacidade para enviar a mensaxe.');
-                checkboxPrivacidade.focus();
+        const clearFieldError = (field, errorSpan) => {
+            field.removeAttribute('aria-invalid');
+            if (errorSpan) errorSpan.textContent = '';
+        };
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Elementos e contenedores de erro
+            const fieldNome = document.getElementById('nome');
+            const errNome = document.getElementById('nomeError');
+            const fieldPhone = document.getElementById('telefono');
+            const errPhone = document.getElementById('telefonoError');
+            const fieldEmail = document.getElementById('email');
+            const errEmail = document.getElementById('emailError');
+            const fieldMsg = document.getElementById('mensaxe');
+            const errMsg = document.getElementById('mensaxeError');
+            const fieldPriv = document.getElementById('privacidade');
+            const errPriv = document.getElementById('privacidadeError');
+
+            // Reset de erros
+            [
+                [fieldNome, errNome],
+                [fieldPhone, errPhone],
+                [fieldEmail, errEmail],
+                [fieldMsg, errMsg],
+                [fieldPriv, errPriv]
+            ].forEach(([input, err]) => clearFieldError(input, err));
+
+            // Validar Nome
+            if (!fieldNome.value.trim() || fieldNome.value.trim().length < 3) {
+                setFieldError(fieldNome, errNome, 'Introduce o teu nome completo (mínimo 3 caracteres).');
+                isValid = false;
+            }
+
+            // Validar Teléfono (España: 9 dixitos)
+            const phoneRegex = /^(\+34|0034)?[6789]\d{8}$/;
+            if (!phoneRegex.test(fieldPhone.value.trim().replace(/\s+/g, ''))) {
+                setFieldError(fieldPhone, errPhone, 'Introduce un número de teléfono válido (9 díxitos).');
+                isValid = false;
+            }
+
+            // Validar Email
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(fieldEmail.value.trim())) {
+                setFieldError(fieldEmail, errEmail, 'Introduce un correo electrónico válido.');
+                isValid = false;
+            }
+
+            // Validar Mensaxe
+            if (!fieldMsg.value.trim() || fieldMsg.value.trim().length < 10) {
+                setFieldError(fieldMsg, errMsg, 'A mensaxe debe ter polo menos 10 caracteres.');
+                isValid = false;
+            }
+
+            // Validar Checkbox Privacidade
+            if (!fieldPriv.checked) {
+                setFieldError(fieldPriv, errPriv, 'Debes aceptar a política de privacidade.');
+                isValid = false;
+            }
+
+            // Se hai erros, enfocar o primeiro campo con fallo
+            if (!isValid) {
+                const firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
+                if (firstInvalid) firstInvalid.focus();
+                return;
+            }
+
+            // Éxito: Ocultar formulario e amosar confirmación
+            contactForm.reset();
+            contactForm.classList.add('hidden');
+            if (formSuccess) {
+                formSuccess.classList.remove('hidden');
+                formSuccess.focus();
             }
         });
     };
