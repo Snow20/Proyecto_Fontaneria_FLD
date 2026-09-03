@@ -1039,6 +1039,58 @@ header {
     background-color: #061729;
 }
 
+/* Indicador de campos obligatorios */
+.req {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Mensajes de error en campos */
+.errorMsg {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    min-height: 1.2em;
+}
+
+/* Campos inválidos */
+.formInput[aria-invalid="true"],
+.formSelect[aria-invalid="true"] {
+    border-color: #d9534f !important;
+    background-color: #fff8f8;
+}
+
+/* Navegación por teclado y foco visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #0056b3 !important;
+    outline-offset: 2px !important;
+}
+
+/* cuadro de confirmación de envío */
+.formSuccess {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formSuccess h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
 /* Legal y faq */
 .legalSection {
     max-width: 1000px;
