@@ -1724,7 +1724,8 @@ details[open] .faqPregunta::after {
 @media (max-width: 768px) {
     .headerContent {
         position: relative;
-        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         padding: var(--space-4) var(--space-6);
     }
@@ -1737,17 +1738,22 @@ details[open] .faqPregunta::after {
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1010;
     }
 
     .headerNavGroup {
         display: none;
-        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        margin-left: 0;
-        padding: var(--space-4) 0;
+        background-color: var(--color-white);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         border-top: 1px solid var(--color-border);
-        margin-top: var(--space-3);
+        padding: var(--space-4);
         gap: var(--space-4);
+        z-index: 1000;
+        margin-top: 0;
     }
 
     .headerNavGroup.nav-active {
