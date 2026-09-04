@@ -46,6 +46,12 @@ body {
     flex: 1;
 }
 
+.mainContent>section {
+    box-sizing: border-box;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
 h1 {
     font-size: 40px;
     font-weight: 700;
@@ -485,7 +491,7 @@ header {
 .card {
     width: 100%;
     background-color: var(--color-navy);
-    border-radius: 16px;
+    border-radius: 14px;
     padding: var(--space-4);
     display: flex;
     flex-direction: column;
@@ -1093,48 +1099,100 @@ textarea:focus-visible {
 
 /* Legal y faq */
 .legalSection {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: var(--space-8) var(--space-4) var(--space-12);
-    text-align: center;
+}
+
+/* Cabecera contenedora con alineación centrada y X a la derecha */
+.legalHeaderContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-8);
+    width: 100%;
 }
 
 .legalMainTitle {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--color-navy);
-    margin-bottom: var(--space-2);
+    text-align: center;
+    margin: 0;
 }
 
-.legalSubtitle {
-    font-size: 28px;
-    font-weight: 700;
+/* Botón X circular para volver a la página previa */
+.btnCloseLegal {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
     color: var(--color-navy);
-    margin-bottom: var(--space-3);
-}
-
-.legalSectionTitle {
     font-size: 24px;
     font-weight: 700;
-    color: var(--color-navy);
-    margin-bottom: var(--space-6);
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.legalContentBox {
-    background-color: #DDE2E8;
-    border-radius: 4px;
+.btnCloseLegal:hover {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    border-color: var(--color-navy);
+}
+
+/* Tarjeta limpia de contenido legal */
+.legalContentCard {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
     padding: var(--space-8);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-align: left;
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
 }
 
-.legalContentBox p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
+.legalContentCard h2 {
+    font-size: 22px;
+    color: var(--color-navy);
+    border-bottom: 2px solid var(--color-bg-light);
+    padding-bottom: var(--space-2);
+}
+
+.legalContentCard p {
+    font-size: 15px;
+    line-height: 1.7;
     color: var(--color-text-main);
+}
+
+/* Adaptación responsive en pantallas móbiles */
+@media (max-width: 768px) {
+    .legalHeaderContainer {
+        justify-content: space-between;
+        margin-bottom: var(--space-6);
+    }
+
+    .legalMainTitle {
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .btnCloseLegal {
+        position: static;
+        transform: none;
+        flex-shrink: 0;
+    }
 }
 
 .faqContainer {
@@ -1473,6 +1531,93 @@ details[open] .faqPregunta::after {
 
 .tablaArrow {
     color: var(--color-navy);
+}
+
+/*modal*/
+
+.legalModal {
+    border: none;
+    border-radius: 20px;
+    padding: var(--space-6);
+    max-width: 520px;
+    width: 90%;
+    max-height: 85vh;
+    box-shadow: 0 12px 32px rgba(10, 37, 64, 0.2);
+    background-color: var(--color-white);
+    margin: auto;
+    position: fixed;
+    inset: 0;
+}
+
+/* Capa de fondo con mayor transparencia */
+.legalModal::backdrop {
+    background-color: rgba(10, 37, 64, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+/* Botón de cierre en esquina superior derecha */
+.modalCloseBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    color: var(--color-navy);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+/* Estructura del contenido */
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.modalTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-navy);
+    padding-right: 36px;
+    text-align: center;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-main);
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+/* Botón inferior centrado */
+.modalFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
+.modalFooter .btn {
+    padding: 12px 32px;
+    border-radius: 20px;
 }
 
 /* Footer */
@@ -1926,7 +2071,7 @@ details[open] .faqPregunta::after {
     }
 
     .card {
-        padding: var(--space-2);
+        padding: var(--space-4);
         border-radius: 14px;
     }
 
@@ -1995,7 +2140,7 @@ details[open] .faqPregunta::after {
     .emergencyBanner {
         flex-direction: column;
         text-align: center;
-        padding: var(--space-4) 0;
+        padding: var(--space-4) var(--space-4);
         gap: var(--space-4);
         background-color: transparent;
         border: none;
@@ -2177,9 +2322,9 @@ details[open] .faqPregunta::after {
 
     .Tabla th,
     .Tabla td {
-        padding: 10px 8px;
-        font-size: 11px;
-        line-height: 1.3;
+        padding: 12px var(--space-3);
+        font-size: 12px;
+        line-height: 1.4;
     }
 
     .Tabla th {

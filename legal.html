@@ -4,48 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fontanaría Fernando López Díaz | Inicio</title>
+    <title>Fontanaría Fernando López Díaz | legal</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
     <main class="mainContent">
         <section class="legalSection">
-            <h1 class="legalMainTitle">Bloque texto legal LSSI-CE / LOPDGDD</h1>
-            <h2 class="legalSubtitle">Política de privacidade</h2>
-            <h3 class="legalSectionTitle" id="privacidade">Título Legal</h3>
 
-            <div class="legalContentBox">
-                <p>De conformidade co disposto no Regulamento (UE) 2016/679 Xeral de Protección de Datos (RXPD) e na Lei
-                    Orgánica 3/2018, do 5 de decembro, de Protección de Datos Persoais e garantía dos dereitos dixitais
-                    (LOPDGDD), infórmase ao usuario de que os datos persoais facilitados a través deste sitio web serán
-                    tratados baixo a responsabilidade de Fernando López Díaz (Fontanaría FLD), con domicilio en Sofán,
-                    Carballo (A Coruña).</p>
-
-                <p>A finalidade da recollida e tratamento dos datos persoais solicitados no formulario de contacto é
-                    xestionar as solicitudes de orzamento, atender as consultas formuladas e prestar os servizos de
-                    fontanaría, calefacción e reformas contratados polos clientes. A base legal para o tratamento dos
-                    seus datos é o consentimento expreso outorgado polo propio interesado ao aceptar esta cláusula e
-                    enviar o formulario.</p>
-
-                <p>Os datos proporcionados conservaranse mentres se manteña a relación comercial ou durante os anos
-                    necesarios para cumprir coas obrigas legais pertinentes. Os datos non se cederán a terceiros salvo
-                    nos casos nos que exista unha obrigación legal ou sexa imprescindible para a prestación do servizo
-                    solicitado.</p>
-
-                <p>O usuario ten dereito a obter confirmación sobre se en Fontanaría FLD estamos a tratar os seus datos
-                    persoais. Por tanto, ten dereito a acceder aos seus datos persoais, rectificar os datos inexactos ou
-                    solicitar a súa supresión cando os datos xa non sexan necesarios para os fins polos que foron
-                    recollidos, así como a exercer os dereitos de limitación, oposición e portabilidade mediante
-                    comunicación escrita dirixida ao enderezo de contacto do responsable.</p>
-
-                <p>Así mesmo, en cumprimento da Lei 34/2002, do 11 de xullo, de Servizos da Sociedade da Información e
-                    de Comercio Electrónico (LSSI-CE), infórmase de que este sitio web utiliza cookies técnicas para
-                    garantir a correcta navegación e funcionamento das súas funcionalidades básicas. Pode consultar máis
-                    información accedendo ás seccións correspondentes de Aviso Legal e Cookies dispoñibles no rodapé.
-                </p>
+            <div class="legalHeaderContainer">
+                <h1 class="legalMainTitle" data-key="legal_main_title">Textos Legais e Normativa</h1>
+                <button type="button" class="btnCloseLegal" onclick="history.back()"
+                    aria-label="Pechar e volver">&times;</button>
             </div>
+
+            <article class="legalContentCard" id="privacidade">
+                <h2 data-key="legal_section_title">Política de Privacidade (LOPDGDD / RXPD)</h2>
+
+                <p data-key="legal_p1">De conformidade co disposto no Regulamento (UE) 2016/679 Xeral de Protección de
+                    Datos (RXPD) e na Lei Orgánica 3/2018, do 5 de decembro, de Protección de Datos Persoais e garantía
+                    dos dereitos dixitais (LOPDGDD), infórmase ao usuario de que os datos persoais facilitados a través
+                    deste sitio web serán tratados baixo a responsabilidade de Fernando López Díaz (Fontanaría FLD), con
+                    domicilio en Sofán, Carballo (A Coruña).</p>
+
+                <p data-key="legal_p2">A finalidade da recollida e tratamento dos datos persoais solicitados no
+                    formulario de contacto é xestionar as solicitudes de orzamento, atender as consultas formuladas e
+                    prestar os servizos de fontanaría, calefacción e reformas contratados polos clientes. A base legal
+                    para o tratamento dos seus datos é o consentimento expreso outorgado polo propio interesado ao
+                    aceptar esta cláusula e enviar o formulario.</p>
+
+                <p data-key="legal_p3">Os datos proporcionados conservaranse mentres se manteña a relación comercial ou
+                    durante os anos necesarios para cumprir coas obrigas legais pertinentes. Os datos non se cederán a
+                    terceiros salvo nos casos nos que exista unha obrigación legal ou sexa imprescindible para a
+                    prestación do servizo solicitado.</p>
+
+                <p data-key="legal_p4">O usuario ten dereito a obter confirmación sobre se en Fontanaría FLD estamos a
+                    tratar os seus datos persoais. Por tanto, ten dereito a acceder aos seus datos persoais, rectificar
+                    os datos inexactos ou solicitar a súa supresión cando os datos xa non sexan necesarios para os fins
+                    polos que foron recollidos, así como a exercer os dereitos de limitación, oposición e portabilidade
+                    mediante comunicación escrita dirixida ao enderezo de contacto do responsable.</p>
+
+                <p data-key="legal_p5">Así mesmo, en cumprimento da Lei 34/2002, do 11 de xullo, de Servizos da
+                    Sociedade da Información e de Comercio Electrónico (LSSI-CE), infórmase de que este sitio web
+                    utiliza cookies técnicas para garantir a correcta navegación e funcionamento das súas
+                    funcionalidades básicas. Pode consultar máis información accedendo ás seccións correspondentes de
+                    Aviso Legal e Cookies dispoñibles no rodapé.</p>
+            </article>
+
         </section>
     </main>
 
@@ -74,15 +81,15 @@
                 </a>
             </div>
 
-            <p class="copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
 
             <nav class="legal-nav" aria-label="Navegación legal">
                 <ul>
-                    <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_aviso">Aviso Legal</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
                     <span class="legal-sep">|</span>
-                    <li><a href="legal.html#cookies">Cookies</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_cookies">Cookies</a></li>
                 </ul>
             </nav>
         </div>

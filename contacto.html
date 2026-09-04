@@ -151,6 +151,28 @@
                         <label for="privacidade" data-key="privacy_accept">Lin e acepto a política de privacidade e os
                             termos de servizo.</label>
                         <span id="privacidadeError" class="errorMsg" aria-live="polite"></span>
+                        <!-- Ventana modal emergente LOPDGDD -->
+                        <dialog id="legalModal" class="legalModal" aria-labelledby="modalTitle">
+                            <button type="button" id="closeLegalModal" class="modalCloseBtn"
+                                aria-label="Pechar">&times;</button>
+                            <div class="modalContent">
+                                <h2 id="modalTitle" class="modalTitle" data-key="legal_modal_title">Política de
+                                    Privacidade e LOPDGDD</h2>
+                                <div class="modalBody">
+                                    <p data-key="modal_body_p1">De conformidade co disposto no Regulamento (UE) 2016/679
+                                        Xeral de Protección de Datos (RXPD) e na Lei Orgánica 3/2018 (LOPDGDD),
+                                        infórmase ao usuario de que os datos persoais facilitados serán tratados baixo a
+                                        responsabilidade de Fernando López Díaz (Fontanaría FLD).</p>
+                                    <p data-key="modal_body_p2">A finalidade do tratamento é xestionar as solicitudes de
+                                        orzamento e atender consultas. Os datos non se cederán a terceiros salvo
+                                        obrigación legal.</p>
+                                </div>
+                                <div class="modalFooter">
+                                    <button type="button" id="acceptLegalBtn" class="btn btn-navy"
+                                        data-key="modal_btn_accept">Entendido e Aceptar</button>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
 
                     <button type="submit" class="btn btnSubmit" data-key="contact_btn">ENVIAR MENSAXE</button>
