@@ -87,9 +87,9 @@
                     <div class="formGroup">
                         <label for="telefono"><span data-key="label_telefono">TELÉFONO</span> <span
                                 class="req">*</span></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+34 000 000 000" required
-                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}" data-key="placeholder_telefono"
-                            aria-required="true" aria-describedby="telefonoError">
+                        <input type="tel" id="telefono" name="telefono" placeholder="600000000" required
+                            class="formInput" pattern="[6789]\d{8}" maxlength="9" data-key="placeholder_telefono"
+                            aria-describedby="telefonoError">
                         <span id="telefonoError" class="errorMsg" aria-live="polite"></span>
                     </div>
 

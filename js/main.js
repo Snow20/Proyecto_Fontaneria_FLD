@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'label_orzamento': 'ORZAMENTO',
             'label_mensaxe': 'MENSAXE',
             'placeholder_nome': 'O teu nome completo',
-            'placeholder_telefono': '+34 000 000 000',
+            'placeholder_telefono': '600000000',
             'placeholder_email': 'exemplo@correo.com',
             'placeholder_mensaxe': 'En que podemos axudarche?',
             'contact_btn': 'ENVIAR MENSAXE',
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'label_orzamento': 'PRESUPUESTO',
             'label_mensaxe': 'MENSAJE',
             'placeholder_nome': 'Tu nombre completo',
-            'placeholder_telefono': '+34 000 000 000',
+            'placeholder_telefono': '600000000',
             'placeholder_email': 'ejemplo@correo.com',
             'placeholder_mensaxe': '¿En qué podemos ayudarte?',
             'contact_btn': 'ENVIAR MENSAJE',
@@ -524,74 +524,116 @@ document.addEventListener('DOMContentLoaded', () => {
         const formSuccess = document.getElementById('formSuccess');
         if (!contactForm) return;
 
+        const fieldNome = document.getElementById('nome');
+        const errNome = document.getElementById('nomeError');
+        const fieldPhone = document.getElementById('telefono');
+        const errPhone = document.getElementById('telefonoError');
+        const fieldEmail = document.getElementById('email');
+        const errEmail = document.getElementById('emailError');
+        const fieldMsg = document.getElementById('mensaxe');
+        const errMsg = document.getElementById('mensaxeError');
+        const fieldPriv = document.getElementById('privacidade');
+        const errPriv = document.getElementById('privacidadeError');
+
         const setFieldError = (field, errorSpan, message) => {
+            if (!field) return;
             field.setAttribute('aria-invalid', 'true');
             if (errorSpan) errorSpan.textContent = message;
         };
 
         const clearFieldError = (field, errorSpan) => {
+            if (!field) return;
             field.removeAttribute('aria-invalid');
             if (errorSpan) errorSpan.textContent = '';
         };
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-
-            // Elementos e contenedores de erro
-            const fieldNome = document.getElementById('nome');
-            const errNome = document.getElementById('nomeError');
-            const fieldPhone = document.getElementById('telefono');
-            const errPhone = document.getElementById('telefonoError');
-            const fieldEmail = document.getElementById('email');
-            const errEmail = document.getElementById('emailError');
-            const fieldMsg = document.getElementById('mensaxe');
-            const errMsg = document.getElementById('mensaxeError');
-            const fieldPriv = document.getElementById('privacidade');
-            const errPriv = document.getElementById('privacidadeError');
-
-            // Reset de erros
-            [
-                [fieldNome, errNome],
-                [fieldPhone, errPhone],
-                [fieldEmail, errEmail],
-                [fieldMsg, errMsg],
-                [fieldPriv, errPriv]
-            ].forEach(([input, err]) => clearFieldError(input, err));
-
-            // Validar Nome
+        // Funciones de validación individual
+        const validateNome = () => {
+            if (!fieldNome) return true;
             if (!fieldNome.value.trim() || fieldNome.value.trim().length < 3) {
                 setFieldError(fieldNome, errNome, 'Introduce o teu nome completo (mínimo 3 caracteres).');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldNome, errNome);
+            return true;
+        };
 
-            // Validar Teléfono (España: 9 dixitos)
-            const phoneRegex = /^(\+34|0034)?[6789]\d{8}$/;
-            if (!phoneRegex.test(fieldPhone.value.trim().replace(/\s+/g, ''))) {
+        const validatePhone = () => {
+            if (!fieldPhone) return true;
+            const phoneRegex = /^[6789]\d{8}$/;
+            const cleanPhone = fieldPhone.value.trim().replace(/\s+/g, '');
+            if (!phoneRegex.test(cleanPhone)) {
                 setFieldError(fieldPhone, errPhone, 'Introduce un número de teléfono válido (9 díxitos).');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldPhone, errPhone);
+            return true;
+        };
 
-            // Validar Email
+        const validateEmail = () => {
+            if (!fieldEmail) return true;
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(fieldEmail.value.trim())) {
                 setFieldError(fieldEmail, errEmail, 'Introduce un correo electrónico válido.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldEmail, errEmail);
+            return true;
+        };
 
-            // Validar Mensaxe
+        const validateMsg = () => {
+            if (!fieldMsg) return true;
             if (!fieldMsg.value.trim() || fieldMsg.value.trim().length < 10) {
                 setFieldError(fieldMsg, errMsg, 'A mensaxe debe ter polo menos 10 caracteres.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldMsg, errMsg);
+            return true;
+        };
 
-            // Validar Checkbox Privacidade
+        const validatePriv = () => {
+            if (!fieldPriv) return true;
             if (!fieldPriv.checked) {
                 setFieldError(fieldPriv, errPriv, 'Debes aceptar a política de privacidade.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldPriv, errPriv);
+            return true;
+        };
 
-            // Se hai erros, enfocar o primeiro campo con fallo
+        // Autovalidación dinámica en tiempo real
+        if (fieldNome) {
+            fieldNome.addEventListener('input', () => { if (fieldNome.hasAttribute('aria-invalid')) validateNome(); });
+            fieldNome.addEventListener('blur', validateNome);
+        }
+        if (fieldPhone) {
+            fieldPhone.addEventListener('input', () => { if (fieldPhone.hasAttribute('aria-invalid')) validatePhone(); });
+            fieldPhone.addEventListener('blur', validatePhone);
+        }
+        if (fieldEmail) {
+            fieldEmail.addEventListener('input', () => { if (fieldEmail.hasAttribute('aria-invalid')) validateEmail(); });
+            fieldEmail.addEventListener('blur', validateEmail);
+        }
+        if (fieldMsg) {
+            fieldMsg.addEventListener('input', () => { if (fieldMsg.hasAttribute('aria-invalid')) validateMsg(); });
+            fieldMsg.addEventListener('blur', validateMsg);
+        }
+        if (fieldPriv) {
+            fieldPriv.addEventListener('change', validatePriv);
+        }
+
+        // Validación al enviar el formulario
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const isNomeValid = validateNome();
+            const isPhoneValid = validatePhone();
+            const isEmailValid = validateEmail();
+            const isMsgValid = validateMsg();
+            const isPrivValid = validatePriv();
+
+            const isValid = isNomeValid && isPhoneValid && isEmailValid && isMsgValid && isPrivValid;
+
             if (!isValid) {
                 const firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
                 if (firstInvalid) firstInvalid.focus();
