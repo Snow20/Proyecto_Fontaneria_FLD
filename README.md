@@ -134,7 +134,7 @@ A execución e verificación detallada dos 14 casos de proba funcionais, de acce
 
 * **Confirmación de Envío Correcto**: Ocultación do formulario e despliegue do cadro verde `#formSuccess` tras un envío válido.
   
-  ![Confirmación de envío correcto](docs/evidencias/02_confirmacion_envio_exito.png)
+  ![Confirmación de envío correcto](docs/evidencias/Proba3_DatosCorrectos.png)
 
 * **Navegación Adaptativa (Móbil)**: Despregue fluído do menú hamburguesa e submenú en resolución de 375px.
   
