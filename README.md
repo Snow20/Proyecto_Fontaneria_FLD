@@ -102,19 +102,44 @@ FontaneriaFLD/
 #### Proba 1: Envío con campos baleiros
 Validación de campos obrigatorios mediante JavaScript. O sistema bloquea o envío, aplica `aria-invalid="true"` e mostra mensaxes de erro específicas debaixo de cada campo obrigatorio.
 
-![Proba 1: Campos Vacíos](docs/Proba1_CamposVacios.png)
+![Proba 1: Campos Vacíos](docs/evidencias/Proba1_CamposVacios.png)
 
 #### Proba 2: Datos con formato incorrecto
 Validación dos formatos de número de teléfono e correo electrónico, así como da lonxitude mínima do texto. Só se resaltan en vermello os erros, mentres que se manteñen os datos válidos introducidos anteriormente.
 
-![Proba 2: Formatos Incorrectos](docs/Proba2_FormatoErrados.png)
+![Proba 2: Formatos Incorrectos](docs/evidencias/Proba2_FormatoErrados.png)
 
 #### Proba 3: Envío de datos válidos
 Validación de datos de entrada con formatos e sintaxe correctos, incluíndo a verificación da casiña de aceptación da política de privacidade da LOPDGDD.
 
-![Proba 3: Datos Válidos](docs/Proba3_EnvioDatosCorrectos.png)
+![Proba 3: Datos Válidos](docs/evidencias/Proba3_EnvioDatosCorrectos.png)
 
 #### Proba 4: Confirmación visual do envío
 Simulación dunha recepción correcta. O formulario ocúltase tras a validación e móstrase o contedor visual `#formSuccess`, que notifica que a mensaxe se recibiu correctamente.
 
-![Prueba 4: Mensaxe de Éxito](docs/Proba3_DatosCorrectos.png)
+![Prueba 4: Mensaxe de Éxito](docs/evidencias/Proba3_DatosCorrectos.png)
+
+
+## Auditoría e Plan de Probas (Fase S14)
+
+A execución e verificación detallada dos 14 casos de proba funcionais, de accesibilidade e de maquetación adaptativa atópase documentada no arquivo dedicado:
+
+👉 **[Ver Plan de Probas e Matriz de Execución (docs/plan-de-probas.md)](docs/plan-de-probas.md)**
+
+## Evidencias Visuais de Probas (Fase S14)
+
+* **Validación de Formulario (Errores)**: Campos resaltados en vermello e mensaxes contextuales ao intentar enviar datos baleiros ou incorrectos.
+  
+  ![Validación de formulario con erros](docs/evidencias/01_validacion_formulario_errores.png)
+
+* **Confirmación de Envío Correcto**: Ocultación do formulario e despliegue do cadro verde `#formSuccess` tras un envío válido.
+  
+  ![Confirmación de envío correcto](docs/evidencias/02_confirmacion_envio_exito.png)
+
+* **Navegación Adaptativa (Móbil)**: Despregue fluído do menú hamburguesa e submenú en resolución de 375px.
+  
+  ![Despregue do menú hamburguesa](docs/evidencias/03_responsive_movil_menu.png)
+
+* **Filtro de Servizos (Estado Baleiro)**: Despliegue do bloque `.emptyState` (`#noResults`) ao seleccionar unha combinación de categoría e orzamento sen coincidencias.
+  
+  ![Estado baleiro no catálogo](docs/evidencias/04_filtro_servizos_estado_baleiro.png)
