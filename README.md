@@ -140,6 +140,4 @@ A execución e verificación detallada dos 14 casos de proba funcionais, de acce
   
   ![Despregue do menú hamburguesa](docs/evidencias/03_responsive_movil_menu.png)
 
-* **Filtro de Servizos (Estado Baleiro)**: Despliegue do bloque `.emptyState` (`#noResults`) ao seleccionar unha combinación de categoría e orzamento sen coincidencias.
-  
-  ![Estado baleiro no catálogo](docs/evidencias/04_filtro_servizos_estado_baleiro.png)
+* **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/informe-accesibilidade-rendemento.md](docs/informe-accesibilidade-rendemento.md)

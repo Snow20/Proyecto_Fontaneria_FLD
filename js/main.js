@@ -158,7 +158,23 @@ document.addEventListener('DOMContentLoaded', () => {
             'legal_modal_title': 'Política de Privacidade e LOPDGDD',
             'modal_body_p1': 'De conformidade co disposto no Regulamento (UE) 2016/679 Xeral de Protección de Datos (RXPD) e na Lei Orgánica 3/2018 (LOPDGDD), infórmase ao usuario de que os datos persoais facilitados serán tratados baixo a responsabilidade de Fernando López Díaz (Fontanaría FLD).',
             'modal_body_p2': 'A finalidade do tratamento é xestionar as solicitudes de orzamento e atender consultas. Os datos non se cederán a terceiros salvo obrigación legal.',
-            'modal_btn_accept': 'Entendido e Aceptar'
+            'modal_btn_accept': 'Entendido e Aceptar',
+
+            //faq.html
+            'faq_q1': 'Atendedes urxencias de fontanaría as 24 horas en Carballo e parroquias?',
+            'faq_a1': 'Si, dispomos de servizo de garda permanente 24/7 para atallar fugas de auga, roturas de tubaxes e desatascos graves en Sofán, Carballo e núcleos próximos.',
+            'faq_q2': 'Cobrades a visita ou o orzamento inicial?',
+            'faq_a2': 'Non, a elaboración de orzamentos para reformas, calefacción ou instalacións novas é completamente gratuíta e sen compromiso en toda a zona de Bergantiños.',
+            'faq_q3': 'Que zona de cobertura atendedes habitualmente?',
+            'faq_a3': 'Damos servizo principal en Carballo, Sofán, A Laracha, Malpica, Ponteceso, Coristanco e desprazamentos á comarca da Coruña.',
+            'faq_q4': 'Fades instalacións de aerotermia, gasóleo e chan radiante?',
+            'faq_a4': 'Si, realizamos a instalación, renovación e mantemento de sistemas de calefacción por aerotermia, caldeiras de gasóleo, biomasa e chan radiante para casas e pisos.',
+            'faq_q5': 'Podedes detectar fugas sen romper paredes ou chans?',
+            'faq_a5': 'Contamos con instrumental de detección non destrutiva para localizar o punto exacto da filtración oculta antes de realizar calquera intervención na estrutura.',
+            'faq_q6': 'Emitides boletíns de auga e certificados oficiais?',
+            'faq_a6': 'Si, dispomos de carné profesional de instalador autorizado para emitir boletíns de auga e certificar instalacións ante a empresa subministradora ou a administración.',
+            'faq_q7': 'Realizades o cambio de bañeira por plato de ducha?',
+            'faq_a7': 'Executamos a substitución completa en tempo récord, incluíndo a modificación de tomas de auga, desaugadoiros e instalación de mampara e grifería.'
         },
         'es': {
             // Navegación
@@ -314,7 +330,23 @@ document.addEventListener('DOMContentLoaded', () => {
             'legal_modal_title': 'Política de Privacidad y LOPDGDD',
             'modal_body_p1': 'De conformidad con lo dispuesto en el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y en la Ley Orgánica 3/2018 (LOPDGDD), se informa al usuario de que los datos personales facilitados serán tratados bajo la responsabilidad de Fernando López Díaz (Fontanería FLD).',
             'modal_body_p2': 'La finalidad del tratamiento es gestionar las solicitudes de presupuesto y atender consultas. Los datos no se cederán a terceros salvo obligación legal.',
-            'modal_btn_accept': 'Entendido y Aceptar'
+            'modal_btn_accept': 'Entendido y Aceptar',
+
+            //faq.html
+            'faq_q1': '¿Atendéis urgencias de fontanería las 24 horas en Carballo y parroquias?',
+            'faq_a1': 'Sí, disponemos de servicio de guardia permanente 24/7 para atajar fugas de agua, roturas de tuberías y desatascos graves en Sofán, Carballo y núcleos cercanos.',
+            'faq_q2': '¿Cobráis la visita o el presupuesto inicial?',
+            'faq_a2': 'No, la elaboración de presupuestos para reformas, calefacción o instalaciones nuevas es completamente gratuita y sin compromiso en toda la zona de Bergantiños.',
+            'faq_q3': '¿Qué zona de cobertura atendéis habitualmente?',
+            'faq_a3': 'Damos servicio principal en Carballo, Sofán, A Laracha, Malpica, Ponteceso, Coristanco y desplazamientos a la comarca de A Coruña.',
+            'faq_q4': '¿Hacéis instalaciones de aerotermia, gasoil y suelo radiante?',
+            'faq_a4': 'Sí, realizamos la instalación, renovación y mantenimiento de sistemas de calefacción por aerotermia, calderas de gasoil, biomasa y suelo radiante para casas y pisos.',
+            'faq_q5': '¿Podéis detectar fugas sin romper paredes o suelos?',
+            'faq_a5': 'Contamos con instrumental de detección no destructiva para localizar el punto exacto de la filtración oculta antes de realizar cualquier intervención en la estructura.',
+            'faq_q6': '¿Emitís boletines de agua y certificados oficiales?',
+            'faq_a6': 'Sí, disponemos de carné profesional de instalador autorizado para emitir boletines de agua y certificar instalaciones ante la empresa suministradora o la administración.',
+            'faq_q7': '¿Realizáis el cambio de bañera por plato de ducha?',
+            'faq_a7': 'Ejecutamos la sustitución completa en tiempo récord, incluyendo la modificación de tomas de agua, desagües e instalación de mampara y grifería.'
         }
     };
 
