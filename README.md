@@ -23,6 +23,7 @@ Fontanaría FLD é o sitio web corporativo de Fontanaría Fernando López Díaz,
 * `css/styles.css`: Folla de estilos global estruturada con variables CSS (*Design Tokens*), arquitectura *responsive* e estilos de accesibilidade (`:focus-visible`).
 * `js/main.js`: Lóxica JavaScript modular que xestiona o selector de idioma, o menú para móbiles, o catálogo interactivo, a validación de formularios e os mapas.
 * `assets/images/`: Galería de recursos gráficos optimizados para servizos, reformas e *banners*.
+* `404.html`: Páxina de erro personalizada para rutas inexistentes.
 
 ## Características
 
@@ -40,40 +41,39 @@ Fontanaría FLD é o sitio web corporativo de Fontanaría Fernando López Díaz,
 * CSS3 (Flexbox, CSS Grid, propiedades personalizadas/tokens).
 * Vanilla JavaScript (modular, ES6+).
 * Leaflet.js (mapas interactivos vía CDN).
+* **Cloudflare Pages**: Aloxamento e despregamento continuo via Git.
 
 ## Estrutura de directorios
 
 ```text
 FontaneriaFLD/
-│── index.html
-│── empresa.html
-│── servizos.html
-│── contacto.html
-│── faq.html
-│── legal.html
-│
-├── servizos/
-│   ├── urxencias.html
-│   └── reformas.html
-│
-├── css/
-│   └── styles.css
-│
-├── js/
-│   └── main.js
-│
 ├── assets/
-│   └── images/
-│       ├── urxencias24h.jpg
-│       ├── reparacions.jpg
-│       ├── reformas.jpg
-│       ├── calefaccion.jpg
-│       ├── instalacionsanitaria.jpg
-│       ├── mantenimiento.jpg
-│       ├── comunidade.jpg
-│       └── fontaneria.jpg
-│
-└── README.md
+│   ├── icons/                  # Vectoriais e iconografía
+│   └── images/                 # Imaxes optimizadas (WebP/JPG/SVG)
+├── css/
+│   └── styles.css              # Ficheiro único de estilos globais
+├── docs/
+│   ├── documentos/             # Documentación administrativa
+│   ├── evidencias/             # Capturas e probas de validación
+│   ├── guia-mantemento.md      # Guía técnica de mantemento
+│   ├── informe-accesibilidade-rendemento.md
+│   └── plan-de-probas.md       # Planificiación de tests
+├── js/
+│   └── main.js                 # Lóxica global, i18n e validacións
+├── servizos/
+│   ├── reformas.html           # Subpáxina de reformas
+│   └── urxencias.html          # Subpáxina de urxencias
+├── .gitignore                  # Exclusións de control de versións
+├── 404.html                    # Xestión de erros HTTP 404
+├── contacto.html               # Formulario de contacto
+├── empresa.html                # Información da empresa
+├── faq.html                    # Preguntas frecuentes
+├── index.html                  # Páxina de inicio
+├── legal.html                  # Textos legais LOPDGDD
+├── README.md                   # Documentación principal
+├── robots.txt                  # Directivas de rastrexo
+├── servizos.html               # Catálogo filtrable
+└── sitemap.xml                 # Mapa do sitio para SEO
 ```
 
 
@@ -163,3 +163,5 @@ A execución e verificación detallada dos 14 casos de proba funcionais, de acce
 
 ### Incidencias Pendentes
 * **Libraría de terceiros**: 2 avisos de compatibilidade antiga no CDN externo `leaflet.css`. O ficheiro de estilos propio (`css/styles.css`) mantense con 0 erros no validador CSS do W3C.
+
+* **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/guia-mantemento.md](docs/guia-mantemento.md)
