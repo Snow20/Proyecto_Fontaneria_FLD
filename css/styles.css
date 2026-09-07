@@ -73,6 +73,12 @@ h3 {
     color: var(--color-navy);
 }
 
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: local('Inter');
+}
+
 .subtitle,
 .heroSubtitle {
     font-size: 20px;
