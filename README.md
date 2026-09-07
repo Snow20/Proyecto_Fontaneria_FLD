@@ -149,26 +149,17 @@ A execución e verificación detallada dos 14 casos de proba funcionais, de acce
 * **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/informe-accesibilidade-rendemento.md](docs/informe-accesibilidade-rendemento.md)
 
 
-## Comprobacións Realizadas despois da Publicación
+## Fase S16 — Publicación e Verificación Final
 
-Protocolo e Seguridade (HTTPS): Verificación do certificado SSL activo en Cloudflare Pages. Rutas e recursos cargados baixo esquemas seguros sen contido mixto (Mixed Content).
+* **Web en Produción**: https://proyecto-fontaneria-fld.pages.dev
+* **Repositorio GitHub**: https://github.com/Snow20/Proyecto_Fontaneria_FLD
 
-Navegación e Rutas Relativas: Comprobación das ligazóns internas en tódalas páxinas, incluíndo o acceso desde subcarpetas (servizos/urxencias.html e servizos/reformas.html cara a ../legal.html).
+### Comprobacións de Produción
+* **HTTPS e Seguridade**: Certificado SSL activo e funcional en Cloudflare Pages.
+* **Xestión de Erros 404**: Carga correcta do ficheiro `404.html` personalizado en rutas inexistentes. Excluído de `sitemap.xml`.
+* **Estabilidade Responsive**: Menú de navegación móbil con `position: absolute` en `.headerNavGroup`, eliminando o desprazamento do botón `.menuToggle`.
+* **Formulario Dinámico**: Autovalidación en tempo real mediante eventos `input` e `blur` en `contacto.html`. Restrición do teléfono a 9 díxitos (`[6789]\d{8}`).
+* **Limpeza do Código**: Ausencia de ficheiros temporais, datos de proba e credenciais.
 
-Validación de Formulario en Tempo Real:
-
-Eventos input e blur activos para limpar e mostrar erros dinámicamente sen requirir re-envío.
-
-Formato de teléfono axustado a 9 díxitos ([6789]\d{8}) co placeholder 600000000.
-
-Menú Móbil e Estabilidade Visual:
-
-Corrixido o desprazamento do botón hamburguesa (.menuToggle) mediante position: absolute en .headerNavGroup.
-
-Verificado o desplegable en resolucións móbiles (320px a 768px) e escritorio sen saltos de maquetación (CLS: 0.00).
-
-Carga de Recursos e Rendemento:
-
-Validación das imaxes WebP/JPG e scripts externos (Leaflet) cargados correctamente.
-
-Verificación da ausencia de ficheiros temporais ou credenciais no repositorio.
+### Incidencias Pendentes
+* **Libraría de terceiros**: 2 avisos de compatibilidade antiga no CDN externo `leaflet.css`. O ficheiro de estilos propio (`css/styles.css`) mantense con 0 erros no validador CSS do W3C.
