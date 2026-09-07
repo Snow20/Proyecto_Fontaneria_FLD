@@ -1,5 +1,11 @@
 # Fontanaría FLD - Fontanería Fernando López Díaz
 
+## Ligazóns de Entrega
+
+Páxina web en produción (HTTPS): https://proyecto-fontaneria-fld.pages.dev
+
+Repositorio de GitHub: https://github.com/Snow20/Proyecto_Fontaneria_FLD
+
 ## Descrición
 
 Fontanaría FLD é o sitio web corporativo de Fontanaría Fernando López Díaz, unha empresa especializada en servizos técnicos de fontanaría e calefacción, reformas integrais e asistencia de urxencia as 24 horas, que presta servizo en Sofán, Carballo e a comarca de Bergantiños. O sitio conta cun deseño bilingüe (galego e castelán) e adaptado a múltiples dispositivos, o que facilita a xestión directa de orzamentos e solicitudes de servizo técnico.
@@ -141,3 +147,28 @@ A execución e verificación detallada dos 14 casos de proba funcionais, de acce
   ![Despregue do menú hamburguesa](docs/evidencias/03_responsive_movil_menu.png)
 
 * **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/informe-accesibilidade-rendemento.md](docs/informe-accesibilidade-rendemento.md)
+
+
+## Comprobacións Realizadas despois da Publicación
+
+Protocolo e Seguridade (HTTPS): Verificación do certificado SSL activo en Cloudflare Pages. Rutas e recursos cargados baixo esquemas seguros sen contido mixto (Mixed Content).
+
+Navegación e Rutas Relativas: Comprobación das ligazóns internas en tódalas páxinas, incluíndo o acceso desde subcarpetas (servizos/urxencias.html e servizos/reformas.html cara a ../legal.html).
+
+Validación de Formulario en Tempo Real:
+
+Eventos input e blur activos para limpar e mostrar erros dinámicamente sen requirir re-envío.
+
+Formato de teléfono axustado a 9 díxitos ([6789]\d{8}) co placeholder 600000000.
+
+Menú Móbil e Estabilidade Visual:
+
+Corrixido o desprazamento do botón hamburguesa (.menuToggle) mediante position: absolute en .headerNavGroup.
+
+Verificado o desplegable en resolucións móbiles (320px a 768px) e escritorio sen saltos de maquetación (CLS: 0.00).
+
+Carga de Recursos e Rendemento:
+
+Validación das imaxes WebP/JPG e scripts externos (Leaflet) cargados correctamente.
+
+Verificación da ausencia de ficheiros temporais ou credenciais no repositorio.

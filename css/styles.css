@@ -111,22 +111,23 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: var(--space-3);
     text-decoration: none;
     flex-shrink: 0;
 }
 
 .logoImg {
-    width: 14px;
-    height: 14px;
-    background-color: #D1D5DB;
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .logoText {
     font-weight: 700;
-    font-size: 16px;
-    color: #7B8A99;
+    font-size: 18px;
+    color: var(--color-navy);
+    letter-spacing: 0.5px;
 }
 
 .headerNavGroup {
@@ -1728,6 +1729,19 @@ details[open] .faqPregunta::after {
         align-items: center;
         justify-content: space-between;
         padding: var(--space-4) var(--space-6);
+    }
+
+    .logo {
+        gap: var(--space-2);
+    }
+
+    .logoImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logoText {
+        font-size: 15px;
     }
 
     .cta {
