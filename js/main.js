@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Banner Hero
             'banner_title': 'Fontanaría Fernando López Díaz',
-            'banner_subtitle': 'O valor dos nosos servizos e calidade. Texto texto máis texto.',
+            'banner_subtitle': 'Solucións rápidas de fontanaría, calefacción e urxencias 24h en Carballo e na comarca de Bergantiños.',
 
             // Tarjetas de servicios principales
             'card_urxencias': 'Urxencias 24h',
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Banner Hero
             'banner_title': 'Fontanería Fernando López Díaz',
-            'banner_subtitle': 'El valor de nuestros servicios y calidad. Texto texto más texto.',
+            'banner_subtitle': 'Soluciones rápidas de fontanería, calefacción y urgencias 24h en Carballo y la comarca de Bergantiños.',
 
             // Tarjetas de servicios principales
             'card_urxencias': 'Urgencias 24h',
