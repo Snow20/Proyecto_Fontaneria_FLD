@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>http://localhost/examen-m3/exercicio-2/index.html</loc></url>
+  
+  <!-- Página principal -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Catálogo general de servicios -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/servizos.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Subpágina: Urgencias 24h -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/servizos/urxencias.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Subpágina: Reformas -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/servizos/reformas.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Empresa / Sobre nosotros -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/empresa.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Formulario de contacto -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/contacto.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/faq.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Textos legales -->
+  <url>
+    <loc>https://proyecto-fontaneria-fld.pages.dev/legal.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

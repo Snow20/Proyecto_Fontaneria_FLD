@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Servizos de fontanaría, calefacción e urxencias 24h en Sofán, Carballo e Bergantiños. Fernando López Díaz (FLD).">
     <title>Fontanaría Fernando López Díaz | Contacto</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <script src="js/main.js" defer></script>
 </head>
 
@@ -14,7 +17,14 @@
     <header>
         <div class="headerContent">
             <a href="index.html" class="logo">
-                <span class="logoImg"></span>
+                <svg class="logoImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" aria-hidden="true">
+                    <rect width="40" height="40" rx="10" fill="#0A2540" />
+                    <path
+                        d="M20 7C20 7 10 18 10 25C10 30.5228 14.4772 35 20 35C25.5228 35 30 30.5228 30 25C30 18 20 7 20 7Z"
+                        fill="#0077FF" />
+                    <path d="M17 19L23 25M19 16L24 21M22 26L27 31" stroke="#FFFFFF" stroke-width="2.5"
+                        stroke-linecap="round" />
+                </svg>
                 <span class="logoText">FLD</span>
             </a>
 
@@ -85,9 +95,9 @@
                     <div class="formGroup">
                         <label for="telefono"><span data-key="label_telefono">TELÉFONO</span> <span
                                 class="req">*</span></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+34 000 000 000" required
-                            class="formInput" pattern="(\+34|0034)?\s?[6789]\d{8}" data-key="placeholder_telefono"
-                            aria-required="true" aria-describedby="telefonoError">
+                        <input type="tel" id="telefono" name="telefono" placeholder="600000000" required
+                            class="formInput" pattern="[6789]\d{8}" maxlength="9" data-key="placeholder_telefono"
+                            aria-describedby="telefonoError">
                         <span id="telefonoError" class="errorMsg" aria-live="polite"></span>
                     </div>
 
@@ -151,6 +161,28 @@
                         <label for="privacidade" data-key="privacy_accept">Lin e acepto a política de privacidade e os
                             termos de servizo.</label>
                         <span id="privacidadeError" class="errorMsg" aria-live="polite"></span>
+                        <!-- Ventana modal emergente LOPDGDD -->
+                        <dialog id="legalModal" class="legalModal" aria-labelledby="modalTitle">
+                            <button type="button" id="closeLegalModal" class="modalCloseBtn"
+                                aria-label="Pechar">&times;</button>
+                            <div class="modalContent">
+                                <h2 id="modalTitle" class="modalTitle" data-key="legal_modal_title">Política de
+                                    Privacidade e LOPDGDD</h2>
+                                <div class="modalBody">
+                                    <p data-key="modal_body_p1">De conformidade co disposto no Regulamento (UE) 2016/679
+                                        Xeral de Protección de Datos (RXPD) e na Lei Orgánica 3/2018 (LOPDGDD),
+                                        infórmase ao usuario de que os datos persoais facilitados serán tratados baixo a
+                                        responsabilidade de Fernando López Díaz (Fontanaría FLD).</p>
+                                    <p data-key="modal_body_p2">A finalidade do tratamento é xestionar as solicitudes de
+                                        orzamento e atender consultas. Os datos non se cederán a terceiros salvo
+                                        obrigación legal.</p>
+                                </div>
+                                <div class="modalFooter">
+                                    <button type="button" id="acceptLegalBtn" class="btn btn-navy"
+                                        data-key="modal_btn_accept">Entendido e Aceptar</button>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
 
                     <button type="submit" class="btn btnSubmit" data-key="contact_btn">ENVIAR MENSAXE</button>
@@ -164,14 +196,13 @@
     <footer class="footerContent">
         <div class="footer-container">
             <div class="footer-social-icons">
-                <a href="https://wa.me/34000000000" aria-label="WhatsApp" target="_blank" rel="noopener"
-                    class="social-link">
+                <a href="https://wa.me/34000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.488 1.333 5.004l-1.417 5.176 5.297-1.389c1.462.798 3.109 1.218 4.774 1.219h.005c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.039-5.177-2.926-7.063a9.923 9.923 0 0 0-7.059-2.946zm5.829 14.18c-.244.688-1.22 1.299-1.992 1.371-.527.049-1.213.089-3.522-.865-2.955-1.219-4.856-4.225-5.005-4.423-.147-.197-1.205-1.604-1.205-3.06 0-1.456.762-2.172 1.033-2.467.271-.295.591-.369.788-.369.197 0 .393.002.565.01.185.008.435-.07.68.518.245.589.836 2.043.91 2.19.074.148.123.32.025.518-.099.197-.148.32-.295.492-.148.173-.311.386-.444.518-.148.148-.302.308-.13.603.172.295.766 1.264 1.643 2.046 1.127 1.005 2.078 1.316 2.373 1.463.295.148.468.123.641-.074.172-.197.739-.861.936-1.156.197-.295.393-.246.664-.148.271.098 1.722.812 2.017.96.295.148.492.221.566.344.074.123.074.713-.17 1.401z" />
                     </svg>
                 </a>
-                <a href="tel:+34000000000" aria-label="Teléfono" class="social-link">
+                <a href="tel:+34000000000" aria-label="Chamar por teléfono" class="social-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />

@@ -1,77 +1,83 @@
 # Fontanaría FLD - Fontanería Fernando López Díaz
 
-## Descripción
+## Ligazóns de Entrega
 
-Fontanaría FLD es la plataforma web corporativa de Fontanería Fernando López Díaz, empresa especializada en servicios técnicos de fontanería, calefacción, reformas integrales y atención de urgencias 24 horas con cobertura en Sofán, Carballo y la comarca de Bergantiños. El sitio web está diseñado con enfoque multidispositivo y bilingüe (gallego y castellano) para la gestión directa de presupuestos y solicitudes técnicas.
+Páxina web en produción (HTTPS): https://proyecto-fontaneria-fld.pages.dev
 
-## Contenido
+Repositorio de GitHub: https://github.com/Snow20/Proyecto_Fontaneria_FLD
 
-* `index.html`: Página principal con presentación corporativa (Hero), servicios destacados, cuadro de cobertura geográfica y mapa interactivo.
-* `empresa.html`: Resumen de trayectoria profesional y bloque de garantías técnicas (Carnet Oficial, Registro Industrial y Atención Local).
-* `servizos.html`: Catálogo dinámico de servicios con panel de filtrado por categoría y ordenador interactivo por precio.
-* `contacto.html`: Formulario accesible de solicitud de presupuesto con validación en cliente (HTML5 + JS), persistencia de datos y confirmación visual.
-* `faq.html`: Sección de preguntas frecuentes con desplegables interactivos tipo acordeón.
-* `legal.html`: Texto normativo estructurado adaptado a LSSI-CE y LOPDGDD con anclas de navegación directa.
-* `servizos/urxencias.html`: Landing page optimizada para averías urgentes con botón de llamada directa (`tel:`), tiempos de respuesta y guía en 3 pasos.
-* `servizos/reformas.html`: Presentación de reformas para particulares y comunidades con tabla técnica de materiales y normativas homologadas.
-* `css/styles.css`: Hoja de estilos global estructurada con variables CSS (Design Tokens), arquitectura responsiva y estilos de accesibilidad (`:focus-visible`).
-* `js/main.js`: Lógica en JavaScript modular que gestiona el selector bilingüe, menú móvil, catálogo interactivo, validación de formularios y mapas.
-* `assets/images/`: Galería de recursos gráficos optimizados para servicios, reformas y banners.
+## Descrición
+
+Fontanaría FLD é o sitio web corporativo de Fontanaría Fernando López Díaz, unha empresa especializada en servizos técnicos de fontanaría e calefacción, reformas integrais e asistencia de urxencia as 24 horas, que presta servizo en Sofán, Carballo e a comarca de Bergantiños. O sitio conta cun deseño bilingüe (galego e castelán) e adaptado a múltiples dispositivos, o que facilita a xestión directa de orzamentos e solicitudes de servizo técnico.
+
+## Contido
+
+* `index.html`: Páxina principal que inclúe unha presentación corporativa (sección *Hero*), servizos destacados, un gráfico de cobertura xeográfica e un mapa interactivo.
+* `empresa.html`: Resumo da traxectoria profesional e sección que detalla as credenciais técnicas (certificación oficial, rexistro industrial e soporte local).
+* `servizos.html`: Catálogo dinámico de servizos con panel de filtrado por categorías e ferramenta interactiva para ordenar prezos.
+* `contacto.html`: Formulario de solicitude de orzamento accesible, con validación no lado do cliente (HTML5 + JS), persistencia de datos e confirmación visual.
+* `faq.html`: Sección de preguntas frecuentes con menús despregables interactivos tipo acordeón.
+* `legal.html`: Texto legal estruturado conforme á normativa LSSI-CE e LOPDGDD, con ancoraxes para navegación directa.
+* `servizos/urxencias.html`: Páxina de destino optimizada para reparacións urxentes, con botón de chamada directa (`tel:`), tempos de resposta e guía de 3 pasos.
+* `servizos/reformas.html`: Presentación de servizos de reforma para particulares e comunidades de propietarios, incluíndo unha táboa técnica de materiais e normativas homologadas.
+* `css/styles.css`: Folla de estilos global estruturada con variables CSS (*Design Tokens*), arquitectura *responsive* e estilos de accesibilidade (`:focus-visible`).
+* `js/main.js`: Lóxica JavaScript modular que xestiona o selector de idioma, o menú para móbiles, o catálogo interactivo, a validación de formularios e os mapas.
+* `assets/images/`: Galería de recursos gráficos optimizados para servizos, reformas e *banners*.
+* `404.html`: Páxina de erro personalizada para rutas inexistentes.
 
 ## Características
 
-* Diseño 100% responsivo adaptado a dispositivos móviles, tabletas y monitores de escritorio.
-* Menú de navegación móvil tipo hamburguesa y submenú desplegable interactivo.
-* Sistema de traducción bilingüe dinámico (Gallego / Castellano) con almacenamiento de preferencia en `localStorage`.
-* Catálogo de servicios con filtrado por atributos (`data-category`) y ordenación ascendente/descendente por precio (`data-price`).
-* Formulario de contacto accesible (cumplimiento LOPDGDD / RGPD), con mensajes de error contextuales y retención de datos.
-* Mapa interactivo de cobertura geográfica integrado con Leaflet.js.
-* Búsqueda y ordenación dinámica de tablas técnicas mediante JavaScript.
+* Deseño 100 % adaptativo (*responsive*) para dispositivos móbiles, tabletas e monitores de escritorio.
+* Menú de navegación móbil tipo "hamburguesa" e submenú despregable interactivo.
+* Sistema de tradución bilingüe dinámica (galego/español) con almacenamento de preferencias en `localStorage`.
+* Catálogo de servizos con filtrado por atributos (`data-category`) e ordenación de prezos ascendente/descendente (`data-price`).
+* Formulario de contacto accesible (conforme á LOPDGDD/RGPD) con mensaxes de erro contextuais e retención de datos.
+* Mapa interactivo de cobertura xeográfica integrado mediante Leaflet.js.
+* Busca e ordenación dinámicas para táboas técnicas mediante JavaScript.
 
-## Tecnologías utilizadas
+## Tecnoloxías empregadas
 
-* HTML5 Semántico y accesible (Atributos ARIA).
-* CSS3 (Flexbox, CSS Grid, Custom Properties / Tokens).
-* JavaScript Vanilla (ES6+ Modular).
-* Leaflet.js (Mapas interactivos vía CDN).
+* HTML5 semántico e accesible (atributos ARIA).
+* CSS3 (Flexbox, CSS Grid, propiedades personalizadas/tokens).
+* Vanilla JavaScript (modular, ES6+).
+* Leaflet.js (mapas interactivos vía CDN).
+* **Cloudflare Pages**: Aloxamento e despregamento continuo via Git.
 
-## Estructura de Directorios
+## Estrutura de directorios
 
 ```text
 FontaneriaFLD/
-│── index.html
-│── empresa.html
-│── servizos.html
-│── contacto.html
-│── faq.html
-│── legal.html
-│
-├── servizos/
-│   ├── urxencias.html
-│   └── reformas.html
-│
-├── css/
-│   └── styles.css
-│
-├── js/
-│   └── main.js
-│
 ├── assets/
-│   └── images/
-│       ├── urxencias24h.jpg
-│       ├── reparacions.jpg
-│       ├── reformas.jpg
-│       ├── calefaccion.jpg
-│       ├── instalacionsanitaria.jpg
-│       ├── mantenimiento.jpg
-│       ├── comunidade.jpg
-│       └── fontaneria.jpg
-│
-└── README.md
+│   ├── icons/                  # Vectoriais e iconografía
+│   └── images/                 # Imaxes optimizadas (WebP/JPG/SVG)
+├── css/
+│   └── styles.css              # Ficheiro único de estilos globais
+├── docs/
+│   ├── documentos/             # Documentación administrativa
+│   ├── evidencias/             # Capturas e probas de validación
+│   ├── guia-mantemento.md      # Guía técnica de mantemento
+│   ├── informe-accesibilidade-rendemento.md
+│   └── plan-de-probas.md       # Planificiación de tests
+├── js/
+│   └── main.js                 # Lóxica global, i18n e validacións
+├── servizos/
+│   ├── reformas.html           # Subpáxina de reformas
+│   └── urxencias.html          # Subpáxina de urxencias
+├── .gitignore                  # Exclusións de control de versións
+├── 404.html                    # Xestión de erros HTTP 404
+├── contacto.html               # Formulario de contacto
+├── empresa.html                # Información da empresa
+├── faq.html                    # Preguntas frecuentes
+├── index.html                  # Páxina de inicio
+├── legal.html                  # Textos legais LOPDGDD
+├── README.md                   # Documentación principal
+├── robots.txt                  # Directivas de rastrexo
+├── servizos.html               # Catálogo filtrable
+└── sitemap.xml                 # Mapa do sitio para SEO
 ```
 
 
-## Mapa de Navegación y Enlazado Cruzado
+## Mapa de navegación e ligazóns cruzadas
 
 | Página Origen | Elemento Interactivo | Página Destino / Acción | Propósito / Función |
 | :--- | :--- | :--- | :--- |
@@ -96,24 +102,66 @@ FontaneriaFLD/
 | `--color-text-sub` | `#6B7280` | Textos auxiliares e información secundaria. |
 
 
-### Evidencias de Pruebas de Formulario (Fase S13)
+### Evidencia de probas de formularios (Fase S13)
 
-#### Prueba 1: Envío con Campos Vacíos
-Validación de campos obligatorios mediante JavaScript. El sistema bloquea el envío, aplica `aria-invalid="true"` y muestra mensajes específicos de error debajo de cada entrada requerida.
 
-![Prueba 1: Campos Vacíos](docs/Proba1_CamposVacios.png)
+#### Proba 1: Envío con campos baleiros
+Validación de campos obrigatorios mediante JavaScript. O sistema bloquea o envío, aplica `aria-invalid="true"` e mostra mensaxes de erro específicas debaixo de cada campo obrigatorio.
 
-#### Prueba 2: Datos con Formato Incorrecto
-Validación de formato de teléfono, correo electrónico e longitud mínima de texto. Se señalan únicamente los errores en rojo mientras se conservan los datos válidos previamente introducidos.
+![Proba 1: Campos Vacíos](docs/evidencias/Proba1_CamposVacios.png)
 
-![Prueba 2: Formatos Incorrectos](docs/Proba2_FormatoErrados.png)
+#### Proba 2: Datos con formato incorrecto
+Validación dos formatos de número de teléfono e correo electrónico, así como da lonxitude mínima do texto. Só se resaltan en vermello os erros, mentres que se manteñen os datos válidos introducidos anteriormente.
 
-#### Prueba 3: Cumplimentación de Datos Válidos
-Validación de entradas con formatos y sintaxis correctas, incluyendo la verificación del checkbox de aceptación de la política de privacidad LOPDGDD.
+![Proba 2: Formatos Incorrectos](docs/evidencias/Proba2_FormatoErrados.png)
 
-![Prueba 3: Datos Válidos](docs/Proba3_EnvioDatosCorrectos.png)
+#### Proba 3: Envío de datos válidos
+Validación de datos de entrada con formatos e sintaxe correctos, incluíndo a verificación da casiña de aceptación da política de privacidade da LOPDGDD.
 
-#### Prueba 4: Confirmación Visual de Envío
-Simulación de recepción técnica. El formulario se oculta tras la validación y se despliega el contenedor visual `#formSuccess` notificando la correcta recepción del mensaje.
+![Proba 3: Datos Válidos](docs/evidencias/Proba3_EnvioDatosCorrectos.png)
 
-![Prueba 4: Mensaje de Éxito](docs/Proba3_DatosCorrectos.png)
+#### Proba 4: Confirmación visual do envío
+Simulación dunha recepción correcta. O formulario ocúltase tras a validación e móstrase o contedor visual `#formSuccess`, que notifica que a mensaxe se recibiu correctamente.
+
+![Prueba 4: Mensaxe de Éxito](docs/evidencias/Proba3_DatosCorrectos.png)
+
+
+## Auditoría e Plan de Probas (Fase S14)
+
+A execución e verificación detallada dos 14 casos de proba funcionais, de accesibilidade e de maquetación adaptativa atópase documentada no arquivo dedicado:
+
+👉 **[Ver Plan de Probas e Matriz de Execución (docs/plan-de-probas.md)](docs/plan-de-probas.md)**
+
+## Evidencias Visuais de Probas (Fase S14)
+
+* **Validación de Formulario (Errores)**: Campos resaltados en vermello e mensaxes contextuales ao intentar enviar datos baleiros ou incorrectos.
+  
+  ![Validación de formulario con erros](docs/evidencias/01_validacion_formulario_errores.png)
+
+* **Confirmación de Envío Correcto**: Ocultación do formulario e despliegue do cadro verde `#formSuccess` tras un envío válido.
+  
+  ![Confirmación de envío correcto](docs/evidencias/Proba3_DatosCorrectos.png)
+
+* **Navegación Adaptativa (Móbil)**: Despregue fluído do menú hamburguesa e submenú en resolución de 375px.
+  
+  ![Despregue do menú hamburguesa](docs/evidencias/03_responsive_movil_menu.png)
+
+* **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/informe-accesibilidade-rendemento.md](docs/informe-accesibilidade-rendemento.md)
+
+
+## Fase S16 — Publicación e Verificación Final
+
+* **Web en Produción**: https://proyecto-fontaneria-fld.pages.dev
+* **Repositorio GitHub**: https://github.com/Snow20/Proyecto_Fontaneria_FLD
+
+### Comprobacións de Produción
+* **HTTPS e Seguridade**: Certificado SSL activo e funcional en Cloudflare Pages.
+* **Xestión de Erros 404**: Carga correcta do ficheiro `404.html` personalizado en rutas inexistentes. Excluído de `sitemap.xml`.
+* **Estabilidade Responsive**: Menú de navegación móbil con `position: absolute` en `.headerNavGroup`, eliminando o desprazamento do botón `.menuToggle`.
+* **Formulario Dinámico**: Autovalidación en tempo real mediante eventos `input` e `blur` en `contacto.html`. Restrición do teléfono a 9 díxitos (`[6789]\d{8}`).
+* **Limpeza do Código**: Ausencia de ficheiros temporais, datos de proba e credenciais.
+
+### Incidencias Pendentes
+* **Libraría de terceiros**: 2 avisos de compatibilidade antiga no CDN externo `leaflet.css`. O ficheiro de estilos propio (`css/styles.css`) mantense con 0 erros no validador CSS do W3C.
+
+* **Informe de Accesibilidade e Rendemento (Fase S15)**: [docs/guia-mantemento.md](docs/guia-mantemento.md)

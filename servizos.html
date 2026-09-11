@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="gal">
 
@@ -217,4 +218,238 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="gal">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontanaría Fernando López Díaz | Servizos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="headerContent">
+            <a href="index.html" class="logo">
+                <svg class="logoImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" aria-hidden="true">
+                    <rect width="40" height="40" rx="10" fill="#0A2540" />
+                    <path
+                        d="M20 7C20 7 10 18 10 25C10 30.5228 14.4772 35 20 35C25.5228 35 30 30.5228 30 25C30 18 20 7 20 7Z"
+                        fill="#0077FF" />
+                    <path d="M17 19L23 25M19 16L24 21M22 26L27 31" stroke="#FFFFFF" stroke-width="2.5"
+                        stroke-linecap="round" />
+                </svg>
+                <span class="logoText">FLD</span>
+            </a>
+
+            <button type="button" class="menuToggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="headerNavGroup" id="mainNav">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" data-key="nav_inicio">Inicio</a></li>
+                        <li class="hasDropdown">
+                            <a href="servizos.html" data-key="nav_servizos">Servizos</a>
+                            <div class="dropdownMenu">
+                                <ul class="dropdownLinks">
+                                    <li><a href="servizos/urxencias.html" data-key="nav_urxencias_sub">Urxencias 24h</a>
+                                    </li>
+                                    <li><a href="servizos/reformas.html" data-key="nav_reformas_sub">Reformas e
+                                            Instalacións</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="empresa.html" data-key="nav_empresa">Empresa</a></li>
+                        <li><a href="contacto.html" data-key="nav_contacto">Contacto</a></li>
+                        <li><a href="faq.html" data-key="nav_faq">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="headerIdiomas">
+                    <div class="lang-switch-pill">
+                        <button type="button" class="btnIdioma active" aria-label="Galego">GAL</button>
+                        <span class="lang-sep">/</span>
+                        <button type="button" class="btnIdioma" aria-label="Castelán">ESP</button>
+                    </div>
+                    <a href="servizos/urxencias.html" class="btn btn-emergency" data-key="btn_urxencias">Urxencias
+                        24h</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContent">
+
+        <section class="filterSection">
+            <div class="filterContainer">
+                <span class="filterLabel" data-key="filter_label">Filtrados combinados:</span>
+
+                <div class="filterButtons">
+                    <button type="button" class="filterBtn active-filter" data-category="all"
+                        data-key="filter_all">Todas</button>
+                    <button type="button" class="filterBtn" data-category="urxencias"
+                        data-key="filter_urxencias">Urxencias</button>
+                    <button type="button" class="filterBtn" data-category="reparacions"
+                        data-key="filter_reparacions">Reparacións</button>
+                    <button type="button" class="filterBtn" data-category="reformas"
+                        data-key="filter_reformas">Reformas</button>
+                    <button type="button" class="filterBtn" data-category="calefaccion"
+                        data-key="filter_calefaccion">Calefacción</button>
+                    <button type="button" class="filterBtn" data-category="instalacions"
+                        data-key="filter_instalacions">Instalacións</button>
+                    <button type="button" class="filterBtn" data-category="mantemento"
+                        data-key="filter_mantemento">Mantemento</button>
+                </div>
+
+                <div class="filterSort">
+                    <select id="sortPrice" class="sortSelect" aria-label="Orzar por prezo">
+                        <option value="" selected data-key="select_default">ORZAMENTO</option>
+                        <option value="baixo" data-key="opt_baixo">Económico (&lt; 100€)</option>
+                        <option value="medio" data-key="opt_medio">Medio (100€ - 500€)</option>
+                        <option value="alto" data-key="opt_alto">Alto (&gt; 500€)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionGrilla">
+            <div class="grilla">
+
+                <!-- SERVIZO 1 -->
+                <article class="card" data-category="urxencias" data-price="50">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/urxencias24h.jpg" alt="Servizo de Urxencias 24h" width="300"
+                            height="200" loading="lazy" decoding="async">
+                    </div>
+                    <a href="servizos/urxencias.html" class="cardButton" data-key="card_urxencias">
+                        Servizo 1 - 50€<br>Urxencias 24h
+                    </a>
+                </article>
+
+                <!-- SERVIZO 2 -->
+                <article class="card" data-category="reparacions" data-price="120">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/reparacions.jpg" alt="Reparacións de fugas" width="300" height="200"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <a href="contacto.html?servicio=reparacions" class="cardButton" data-key="card_reparacions">
+                        Servizo 2 - 120€<br>Reparacións de fugas
+                    </a>
+                </article>
+
+                <!-- SERVIZO 3 -->
+                <article class="card" data-category="instalacions" data-price="350">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/instalacionsanitaria.jpg" alt="Instalacións Sanitarias" width="300"
+                            height="200" loading="lazy" decoding="async">
+                    </div>
+                    <a href="contacto.html?servicio=instalacions" class="cardButton" data-key="card_instalacions">
+                        Servizo 3 - 350€<br>Instalacións Sanitaria
+                    </a>
+                </article>
+
+                <!-- SERVIZO 4 -->
+                <article class="card" data-category="calefaccion" data-price="80">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/calefaccion.jpg" alt="Calefacción" width="300" height="200"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <a href="contacto.html?servicio=calefaccion" class="cardButton" data-key="card_calefaccion">
+                        Servizo 4 - 80€<br>Calefacción
+                    </a>
+                </article>
+
+                <!-- SERVIZO 5 -->
+                <article class="card" data-category="reformas" data-price="200">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/reformas.jpg" alt="Reformas Integrais" width="300" height="200"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <a href="servizos/reformas.html" class="cardButton" data-key="card_reformas">
+                        Servizo 5 - 200€<br>Reforma Integrais
+                    </a>
+                </article>
+
+                <!-- SERVIZO 6 -->
+                <article class="card" data-category="mantemento" data-price="400">
+                    <div class="cardImage-wrapper">
+                        <img src="assets/images/mantenimiento.jpg" alt="Mantemento" width="300" height="200"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <a href="contacto.html?servicio=mantemento" class="cardButton" data-key="card_mantemento">
+                        Servizo 6 - 400€<br>Mantemento
+                    </a>
+                </article>
+
+            </div>
+
+
+            <div id="noResults" class="emptyState hidden">
+                <div class="emptyIconWrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                </div>
+                <div class="emptyTextContent">
+                    <span class="emptyTag" data-key="empty_title">Sen resultados</span>
+                    <p data-key="empty_msg">Non se atoparon servizos que coincidan cos criterios seleccionados.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footerContent">
+        <div class="footer-container">
+            <div class="footer-social-icons">
+                <a href="https://wa.me/34000000000" aria-label="WhatsApp" target="_blank" rel="noopener"
+                    class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.488 1.333 5.004l-1.417 5.176 5.297-1.389c1.462.798 3.109 1.218 4.774 1.219h.005c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.039-5.177-2.926-7.063a9.923 9.923 0 0 0-7.059-2.946zm5.829 14.18c-.244.688-1.22 1.299-1.992 1.371-.527.049-1.213.089-3.522-.865-2.955-1.219-4.856-4.225-5.005-4.423-.147-.197-1.205-1.604-1.205-3.06 0-1.456.762-2.172 1.033-2.467.271-.295.591-.369.788-.369.197 0 .393.002.565.01.185.008.435-.07.68.518.245.589.836 2.043.91 2.19.074.148.123.32.025.518-.099.197-.148.32-.295.492-.148.173-.311.386-.444.518-.148.148-.302.308-.13.603.172.295.766 1.264 1.643 2.046 1.127 1.005 2.078 1.316 2.373 1.463.295.148.468.123.641-.074.172-.197.739-.861.936-1.156.197-.295.393-.246.664-.148.271.098 1.722.812 2.017.96.295.148.492.221.566.344.074.123.074.713-.17 1.401z" />
+                    </svg>
+                </a>
+                <a href="tel:+34000000000" aria-label="Teléfono" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                    </svg>
+                </a>
+                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"
+                    class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+
+            <p class="copyright" data-key="footer_copyright">&copy; 2026 FLD. Todos os dereitos reservados.</p>
+
+            <nav class="legal-nav" aria-label="Navegación legal">
+                <ul>
+                    <li><a href="legal.html#aviso-legal" data-key="legal_aviso">Aviso Legal</a></li>
+                    <li><a href="legal.html#privacidade" data-key="legal_privacidade">Privacidade</a></li>
+                    <li><a href="legal.html#cookies" data-key="legal_cookies">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+>>>>>>> 02b6127f61cccf6fc4d608b4d9c3a3874efbceb2
 </html>

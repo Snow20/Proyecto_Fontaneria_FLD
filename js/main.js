@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Banner Hero
             'banner_title': 'Fontanaría Fernando López Díaz',
-            'banner_subtitle': 'O valor dos nosos servizos e calidade. Texto texto máis texto.',
+            'banner_subtitle': 'Solucións rápidas de fontanaría, calefacción e urxencias 24h en Carballo e na comarca de Bergantiños.',
 
             // Tarjetas de servicios principales
             'card_urxencias': 'Urxencias 24h',
@@ -108,8 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'ref_row2_mat': 'Panel illante',
             'ref_row2_spec': 'Resistencia Térmica R3',
 
-
-
             // Opciones de formulario (contacto.html)
             'select_default': 'Seleccionar opción',
             'opt_manan': 'Mañá (08:00 - 14:00)',
@@ -133,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'label_orzamento': 'ORZAMENTO',
             'label_mensaxe': 'MENSAXE',
             'placeholder_nome': 'O teu nome completo',
-            'placeholder_telefono': '+34 000 000 000',
+            'placeholder_telefono': '600000000',
             'placeholder_email': 'exemplo@correo.com',
             'placeholder_mensaxe': 'En que podemos axudarche?',
             'contact_btn': 'ENVIAR MENSAXE',
@@ -144,7 +142,39 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer_copyright': '© 2026 FLD. Todos os dereitos reservados.',
             'legal_aviso': 'Aviso Legal',
             'legal_privacidade': 'Privacidade',
-            'legal_cookies': 'Cookies'
+            'legal_cookies': 'Cookies',
+
+            //legal.html
+            'legal_main_title': 'Textos Legais e Normativa',
+            'legal_section_title': 'Política de Privacidade (LOPDGDD / RXPD)',
+            'legal_p1': 'De conformidade co disposto no Regulamento (UE) 2016/679 Xeral de Protección de Datos (RXPD) e na Lei Orgánica 3/2018, do 5 de decembro, de Protección de Datos Persoais e garantía dos dereitos dixitais (LOPDGDD), infórmase ao usuario de que os datos persoais facilitados a través deste sitio web serán tratados baixo a responsabilidade de Fernando López Díaz (Fontanaría FLD), con domicilio en Sofán, Carballo (A Coruña).',
+            'legal_p2': 'A finalidade da recollida e tratamento dos datos persoais solicitados no formulario de contacto é xestionar as solicitudes de orzamento, atender as consultas formuladas e prestar os servizos de fontanaría, calefacción e reformas contratados polos clientes. A base legal para o tratamento dos seus datos é o consentimento expreso outorgado polo propio interesado ao aceptar esta cláusula e enviar o formulario.',
+            'legal_p3': 'Os datos proporcionados conservaranse mentres se manteña a relación comercial ou durante os anos necesarios para cumprir coas obrigas legais pertinentes. Os datos non se cederán a terceiros salvo nos casos nos que exista unha obrigación legal ou sexa imprescindible para a prestación do servizo solicitado.',
+            'legal_p4': 'O usuario ten dereito a obter confirmación sobre se en Fontanaría FLD estamos a tratar os seus datos persoais. Por tanto, ten dereito a acceder aos seus datos persoais, rectificar os datos inexactos ou solicitar a súa supresión cando os datos xa non sexan necesarios para os fins polos que foron recollidos, así como a exercer os dereitos de limitación, oposición e portabilidade mediante comunicación escrita dirixida ao enderezo de contacto do responsable.',
+            'legal_p5': 'Así mesmo, en cumprimento da Lei 34/2002, do 11 de xullo, de Servizos da Sociedade da Información e de Comercio Electrónico (LSSI-CE), infórmase de que este sitio web utiliza cookies técnicas para garantir a correcta navegación e funcionamento das súas funcionalidades básicas. Pode consultar máis información accedendo ás seccións correspondentes de Aviso Legal e Cookies dispoñibles no rodapé.',
+
+            // Modal e Privacidade
+            'privacy_accept': 'Lin e acepto a política de privacidade e os termos de servizo.',
+            'legal_modal_title': 'Política de Privacidade e LOPDGDD',
+            'modal_body_p1': 'De conformidade co disposto no Regulamento (UE) 2016/679 Xeral de Protección de Datos (RXPD) e na Lei Orgánica 3/2018 (LOPDGDD), infórmase ao usuario de que os datos persoais facilitados serán tratados baixo a responsabilidade de Fernando López Díaz (Fontanaría FLD).',
+            'modal_body_p2': 'A finalidade do tratamento é xestionar as solicitudes de orzamento e atender consultas. Os datos non se cederán a terceiros salvo obrigación legal.',
+            'modal_btn_accept': 'Entendido e Aceptar',
+
+            //faq.html
+            'faq_q1': 'Atendedes urxencias de fontanaría as 24 horas en Carballo e parroquias?',
+            'faq_a1': 'Si, dispomos de servizo de garda permanente 24/7 para atallar fugas de auga, roturas de tubaxes e desatascos graves en Sofán, Carballo e núcleos próximos.',
+            'faq_q2': 'Cobrades a visita ou o orzamento inicial?',
+            'faq_a2': 'Non, a elaboración de orzamentos para reformas, calefacción ou instalacións novas é completamente gratuíta e sen compromiso en toda a zona de Bergantiños.',
+            'faq_q3': 'Que zona de cobertura atendedes habitualmente?',
+            'faq_a3': 'Damos servizo principal en Carballo, Sofán, A Laracha, Malpica, Ponteceso, Coristanco e desprazamentos á comarca da Coruña.',
+            'faq_q4': 'Fades instalacións de aerotermia, gasóleo e chan radiante?',
+            'faq_a4': 'Si, realizamos a instalación, renovación e mantemento de sistemas de calefacción por aerotermia, caldeiras de gasóleo, biomasa e chan radiante para casas e pisos.',
+            'faq_q5': 'Podedes detectar fugas sen romper paredes ou chans?',
+            'faq_a5': 'Contamos con instrumental de detección non destrutiva para localizar o punto exacto da filtración oculta antes de realizar calquera intervención na estrutura.',
+            'faq_q6': 'Emitides boletíns de auga e certificados oficiais?',
+            'faq_a6': 'Si, dispomos de carné profesional de instalador autorizado para emitir boletíns de auga e certificar instalacións ante a empresa subministradora ou a administración.',
+            'faq_q7': 'Realizades o cambio de bañeira por plato de ducha?',
+            'faq_a7': 'Executamos a substitución completa en tempo récord, incluíndo a modificación de tomas de auga, desaugadoiros e instalación de mampara e grifería.'
         },
         'es': {
             // Navegación
@@ -160,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Banner Hero
             'banner_title': 'Fontanería Fernando López Díaz',
-            'banner_subtitle': 'El valor de nuestros servicios y calidad. Texto texto más texto.',
+            'banner_subtitle': 'Soluciones rápidas de fontanería, calefacción y urgencias 24h en Carballo y la comarca de Bergantiños.',
 
             // Tarjetas de servicios principales
             'card_urxencias': 'Urgencias 24h',
@@ -272,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'label_orzamento': 'PRESUPUESTO',
             'label_mensaxe': 'MENSAJE',
             'placeholder_nome': 'Tu nombre completo',
-            'placeholder_telefono': '+34 000 000 000',
+            'placeholder_telefono': '600000000',
             'placeholder_email': 'ejemplo@correo.com',
             'placeholder_mensaxe': '¿En qué podemos ayudarte?',
             'contact_btn': 'ENVIAR MENSAJE',
@@ -284,7 +314,39 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer_copyright': '© 2026 FLD. Todos los derechos reservados.',
             'legal_aviso': 'Aviso Legal',
             'legal_privacidade': 'Privacidad',
-            'legal_cookies': 'Cookies'
+            'legal_cookies': 'Cookies',
+
+            //legal.html
+            'legal_main_title': 'Textos Legales y Normativa',
+            'legal_section_title': 'Política de Privacidad (LOPDGDD / RGPD)',
+            'legal_p1': 'De conformidad con lo dispuesto en el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se informa al usuario de que los datos personales facilitados a través de este sitio web serán tratados bajo la responsabilidad de Fernando López Díaz (Fontanería FLD), con domicilio en Sofán, Carballo (A Coruña).',
+            'legal_p2': 'La finalidad de la recogida y tratamiento de los datos personales solicitados en el formulario de contacto es gestionar las solicitudes de presupuesto, atender las consultas formuladas y prestar los servicios de fontanería, calefacción y reformas contratados por los clientes. La base legal para el tratamiento de sus datos es el consentimiento expreso otorgado por el propio interesado al aceptar esta cláusula y enviar el formulario.',
+            'legal_p3': 'Los datos proporcionados se conservarán mientras se mantenga la relación comercial o durante los años necesarios para cumplir con las obligaciones legales pertinentes. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal o sea imprescindible para la prestación del servicio solicitado.',
+            'legal_p4': 'El usuario tiene derecho a obtener confirmación sobre si en Fontanería FLD estamos tratando sus datos personales. Por tanto, tiene derecho a acceder a sus datos personales, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios para los fines para los que fueron recogidos, así como a ejercer los derechos de limitación en el tratamiento.',
+            'legal_p5': 'Asimismo, en cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que este sitio web utiliza cookies técnicas para garantizar la correcta navegación y funcionamiento de sus funcionalidades básicas. Puede consultar más información accediendo a las secciones correspondientes de Aviso Legal y Cookies disponibles en el pie de página.',
+
+            // Modal y Privacidad
+            'privacy_accept': 'Leí y acepto la política de privacidad y los términos de servicio.',
+            'legal_modal_title': 'Política de Privacidad y LOPDGDD',
+            'modal_body_p1': 'De conformidad con lo dispuesto en el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y en la Ley Orgánica 3/2018 (LOPDGDD), se informa al usuario de que los datos personales facilitados serán tratados bajo la responsabilidad de Fernando López Díaz (Fontanería FLD).',
+            'modal_body_p2': 'La finalidad del tratamiento es gestionar las solicitudes de presupuesto y atender consultas. Los datos no se cederán a terceros salvo obligación legal.',
+            'modal_btn_accept': 'Entendido y Aceptar',
+
+            //faq.html
+            'faq_q1': '¿Atendéis urgencias de fontanería las 24 horas en Carballo y parroquias?',
+            'faq_a1': 'Sí, disponemos de servicio de guardia permanente 24/7 para atajar fugas de agua, roturas de tuberías y desatascos graves en Sofán, Carballo y núcleos cercanos.',
+            'faq_q2': '¿Cobráis la visita o el presupuesto inicial?',
+            'faq_a2': 'No, la elaboración de presupuestos para reformas, calefacción o instalaciones nuevas es completamente gratuita y sin compromiso en toda la zona de Bergantiños.',
+            'faq_q3': '¿Qué zona de cobertura atendéis habitualmente?',
+            'faq_a3': 'Damos servicio principal en Carballo, Sofán, A Laracha, Malpica, Ponteceso, Coristanco y desplazamientos a la comarca de A Coruña.',
+            'faq_q4': '¿Hacéis instalaciones de aerotermia, gasoil y suelo radiante?',
+            'faq_a4': 'Sí, realizamos la instalación, renovación y mantenimiento de sistemas de calefacción por aerotermia, calderas de gasoil, biomasa y suelo radiante para casas y pisos.',
+            'faq_q5': '¿Podéis detectar fugas sin romper paredes o suelos?',
+            'faq_a5': 'Contamos con instrumental de detección no destructiva para localizar el punto exacto de la filtración oculta antes de realizar cualquier intervención en la estructura.',
+            'faq_q6': '¿Emitís boletines de agua y certificados oficiales?',
+            'faq_a6': 'Sí, disponemos de carné profesional de instalador autorizado para emitir boletines de agua y certificar instalaciones ante la empresa suministradora o la administración.',
+            'faq_q7': '¿Realizáis el cambio de bañera por plato de ducha?',
+            'faq_a7': 'Ejecutamos la sustitución completa en tiempo récord, incluyendo la modificación de tomas de agua, desagües e instalación de mampara y grifería.'
         }
     };
 
@@ -317,15 +379,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const initLanguageSwitcher = () => {
         const langButtons = document.querySelectorAll('.lang-switch-pill .btnIdioma');
-        if (!langButtons.length) return;
 
-        langButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const lang = button.getAttribute('data-lang') || (button.textContent.trim().toLowerCase() === 'gal' ? 'gl' : 'es');
-                changeLanguage(lang);
+        if (langButtons.length > 0) {
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang') || (button.textContent.trim().toLowerCase() === 'gal' ? 'gl' : 'es');
+                    changeLanguage(lang);
+                });
             });
-        });
+        }
 
+        // Se ejecuta siempre, existan o no botones en la página actual
         const savedLang = localStorage.getItem('preferredLang') || 'gl';
         changeLanguage(savedLang);
     };
@@ -337,23 +401,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const filterButtons = document.querySelectorAll('.filterBtn');
         const sortSelect = document.getElementById('sortPrice') || document.querySelector('.sortSelect');
         const cardsContainer = document.querySelector('.sectionGrilla .grilla');
-        const emptyState = document.querySelector('.emptyState');
+        const emptyState = document.getElementById('noResults') || document.querySelector('.emptyState');
 
         if (!cardsContainer || !filterButtons.length) return;
 
         const cards = Array.from(cardsContainer.querySelectorAll('.card'));
         let currentCategory = 'all';
-        let currentSort = 'default';
+        let currentPriceRange = '';
 
         const updateCatalog = () => {
             let visibleCount = 0;
 
-            // Filtrado por categoría
             cards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                const isMatch = (currentCategory === 'all' || cardCategory === currentCategory);
+                const cardPrice = parseFloat(card.getAttribute('data-price')) || 0;
 
-                if (isMatch) {
+                // Comparar categoría
+                const matchCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+
+                // Comparar rango de presupuesto con el precio numérico
+                let matchPrice = true;
+                if (currentPriceRange === 'baixo') {
+                    matchPrice = cardPrice < 100;
+                } else if (currentPriceRange === 'medio') {
+                    matchPrice = cardPrice >= 100 && cardPrice <= 500;
+                } else if (currentPriceRange === 'alto') {
+                    matchPrice = cardPrice > 500;
+                }
+
+                if (matchCategory && matchPrice) {
                     card.classList.remove('hidden');
                     visibleCount++;
                 } else {
@@ -361,20 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Ordenación de elementos visibles
-            const visibleCards = cards.filter(card => !card.classList.contains('hidden'));
-
-            if (currentSort !== 'default') {
-                visibleCards.sort((a, b) => {
-                    const priceA = parseFloat(a.getAttribute('data-price')) || 0;
-                    const priceB = parseFloat(b.getAttribute('data-price')) || 0;
-                    return currentSort === 'asc' ? priceA - priceB : priceB - priceA;
-                });
-
-                visibleCards.forEach(card => cardsContainer.appendChild(card));
-            }
-
-            // Gestión del estado vacío
+            // Mostrar u ocultar el mensaje de estado vacío
             if (emptyState) {
                 if (visibleCount === 0) {
                     emptyState.classList.remove('hidden');
@@ -395,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sortSelect) {
             sortSelect.addEventListener('change', (e) => {
-                currentSort = e.target.value;
+                currentPriceRange = e.target.value;
                 updateCatalog();
             });
         }
@@ -461,74 +524,116 @@ document.addEventListener('DOMContentLoaded', () => {
         const formSuccess = document.getElementById('formSuccess');
         if (!contactForm) return;
 
+        const fieldNome = document.getElementById('nome');
+        const errNome = document.getElementById('nomeError');
+        const fieldPhone = document.getElementById('telefono');
+        const errPhone = document.getElementById('telefonoError');
+        const fieldEmail = document.getElementById('email');
+        const errEmail = document.getElementById('emailError');
+        const fieldMsg = document.getElementById('mensaxe');
+        const errMsg = document.getElementById('mensaxeError');
+        const fieldPriv = document.getElementById('privacidade');
+        const errPriv = document.getElementById('privacidadeError');
+
         const setFieldError = (field, errorSpan, message) => {
+            if (!field) return;
             field.setAttribute('aria-invalid', 'true');
             if (errorSpan) errorSpan.textContent = message;
         };
 
         const clearFieldError = (field, errorSpan) => {
+            if (!field) return;
             field.removeAttribute('aria-invalid');
             if (errorSpan) errorSpan.textContent = '';
         };
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-
-            // Elementos e contenedores de erro
-            const fieldNome = document.getElementById('nome');
-            const errNome = document.getElementById('nomeError');
-            const fieldPhone = document.getElementById('telefono');
-            const errPhone = document.getElementById('telefonoError');
-            const fieldEmail = document.getElementById('email');
-            const errEmail = document.getElementById('emailError');
-            const fieldMsg = document.getElementById('mensaxe');
-            const errMsg = document.getElementById('mensaxeError');
-            const fieldPriv = document.getElementById('privacidade');
-            const errPriv = document.getElementById('privacidadeError');
-
-            // Reset de erros
-            [
-                [fieldNome, errNome],
-                [fieldPhone, errPhone],
-                [fieldEmail, errEmail],
-                [fieldMsg, errMsg],
-                [fieldPriv, errPriv]
-            ].forEach(([input, err]) => clearFieldError(input, err));
-
-            // Validar Nome
+        // Funciones de validación individual
+        const validateNome = () => {
+            if (!fieldNome) return true;
             if (!fieldNome.value.trim() || fieldNome.value.trim().length < 3) {
                 setFieldError(fieldNome, errNome, 'Introduce o teu nome completo (mínimo 3 caracteres).');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldNome, errNome);
+            return true;
+        };
 
-            // Validar Teléfono (España: 9 dixitos)
-            const phoneRegex = /^(\+34|0034)?[6789]\d{8}$/;
-            if (!phoneRegex.test(fieldPhone.value.trim().replace(/\s+/g, ''))) {
+        const validatePhone = () => {
+            if (!fieldPhone) return true;
+            const phoneRegex = /^[6789]\d{8}$/;
+            const cleanPhone = fieldPhone.value.trim().replace(/\s+/g, '');
+            if (!phoneRegex.test(cleanPhone)) {
                 setFieldError(fieldPhone, errPhone, 'Introduce un número de teléfono válido (9 díxitos).');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldPhone, errPhone);
+            return true;
+        };
 
-            // Validar Email
+        const validateEmail = () => {
+            if (!fieldEmail) return true;
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(fieldEmail.value.trim())) {
                 setFieldError(fieldEmail, errEmail, 'Introduce un correo electrónico válido.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldEmail, errEmail);
+            return true;
+        };
 
-            // Validar Mensaxe
+        const validateMsg = () => {
+            if (!fieldMsg) return true;
             if (!fieldMsg.value.trim() || fieldMsg.value.trim().length < 10) {
                 setFieldError(fieldMsg, errMsg, 'A mensaxe debe ter polo menos 10 caracteres.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldMsg, errMsg);
+            return true;
+        };
 
-            // Validar Checkbox Privacidade
+        const validatePriv = () => {
+            if (!fieldPriv) return true;
             if (!fieldPriv.checked) {
                 setFieldError(fieldPriv, errPriv, 'Debes aceptar a política de privacidade.');
-                isValid = false;
+                return false;
             }
+            clearFieldError(fieldPriv, errPriv);
+            return true;
+        };
 
-            // Se hai erros, enfocar o primeiro campo con fallo
+        // Autovalidación dinámica en tiempo real
+        if (fieldNome) {
+            fieldNome.addEventListener('input', () => { if (fieldNome.hasAttribute('aria-invalid')) validateNome(); });
+            fieldNome.addEventListener('blur', validateNome);
+        }
+        if (fieldPhone) {
+            fieldPhone.addEventListener('input', () => { if (fieldPhone.hasAttribute('aria-invalid')) validatePhone(); });
+            fieldPhone.addEventListener('blur', validatePhone);
+        }
+        if (fieldEmail) {
+            fieldEmail.addEventListener('input', () => { if (fieldEmail.hasAttribute('aria-invalid')) validateEmail(); });
+            fieldEmail.addEventListener('blur', validateEmail);
+        }
+        if (fieldMsg) {
+            fieldMsg.addEventListener('input', () => { if (fieldMsg.hasAttribute('aria-invalid')) validateMsg(); });
+            fieldMsg.addEventListener('blur', validateMsg);
+        }
+        if (fieldPriv) {
+            fieldPriv.addEventListener('change', validatePriv);
+        }
+
+        // Validación al enviar el formulario
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const isNomeValid = validateNome();
+            const isPhoneValid = validatePhone();
+            const isEmailValid = validateEmail();
+            const isMsgValid = validateMsg();
+            const isPrivValid = validatePriv();
+
+            const isValid = isNomeValid && isPhoneValid && isEmailValid && isMsgValid && isPrivValid;
+
             if (!isValid) {
                 const firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
                 if (firstInvalid) firstInvalid.focus();
@@ -659,6 +764,51 @@ document.addEventListener('DOMContentLoaded', () => {
             .openPopup();
     };
 
+    //pantalla modal legal (aviso legal, privacidade, cookies)
+    const initLegalModalOnCheck = () => {
+        const checkbox = document.getElementById('privacidade');
+        const modal = document.getElementById('legalModal');
+        const closeBtn = document.getElementById('closeLegalModal');
+        const acceptBtn = document.getElementById('acceptLegalBtn');
+
+        if (!checkbox || !modal) return;
+
+        // Disparar la modal en cuanto el usuario marque el checkbox
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                modal.showModal();
+            }
+        });
+
+        // Cerrar desde el botón superior X
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.close();
+            });
+        }
+
+        // Cerrar desde el botón interior de aceptación
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                modal.close();
+            });
+        }
+
+        // Cerrar si se hace clic en la capa oscura fuera de la modal
+        modal.addEventListener('click', (e) => {
+            const rect = modal.getBoundingClientRect();
+            if (
+                e.clientX < rect.left ||
+                e.clientX > rect.right ||
+                e.clientY < rect.top ||
+                e.clientY > rect.bottom
+            ) {
+                modal.close();
+            }
+        });
+    };
+
+
     // Inicializacion global de modulos
     initLanguageSwitcher();
     initServicesCatalog();
@@ -668,4 +818,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initInteractiveTable();
     initMobileMenu();
     initMap();
+    initLegalModalOnCheck();
 });
